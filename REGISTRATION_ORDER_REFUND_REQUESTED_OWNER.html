@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!--
+    Template Name: REGISTRATION_ORDER_REFUND_REQUESTED_OWNER
+    Version: 1
+    From Email: registration@fntech.com
+    Use Subject: {{ summit_name }}: You order refund request has been received
+    -->
+    <meta charset="utf-8">
+    <title>{{ summit_name }}: You order refund request has been received</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+    p, h1, h2, h3, h4, h5, h6, ul, li, a, body {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        line-height: 1.6rem;
+        margin: .25rem 0 .5rem;
+        text-rendering: optimizeLegibility;
+        color: #53585f;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    h1 {
+        color: #1c9b93;
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+        margin-top:1rem;
+    }
+
+    p.is-teal,
+    .is-teal li {
+        color: #1c9b93;
+    }
+
+    .email-content {
+        padding: 1.75rem;
+    }
+
+    img.email-header {
+        height: 100%;
+        width:100%;
+    }
+
+    ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+    }
+
+    li {
+        line-height: 1.25rem;
+        margin: .25rem;
+    }
+
+    .email-cta {
+        background-color: #00CEC4;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+    }
+
+    .email-cta p {
+        margin-left: 3%;
+    }
+
+    .email-button {
+        text-align: center;
+        margin: 1rem 1rem 3rem;
+    }
+
+    .btn-primary:hover {
+        background-color: #00cec4;
+    }
+
+    .btn-primary {
+        box-sizing: border-box;
+        margin: 0;
+        font: inherit;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        font-family: inherit;
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border-radius: 4px;
+        background-color: #00a19a;
+        color: #ffffff;
+        border: none;
+    }
+
+    small {
+        line-height: 1;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="email-main">
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Official Ticket Info" height="100%" width="100%"> -->
+        <div class="email-content">
+            <p>
+
+                Hi {{ owner_full_name }}, 
+            </P>
+                
+            <P>   
+                Your refund request for {{ summit_name }} has been received. Your refund request was for the order:
+            </p>
+            <p>
+            <ul class="order_list">
+                <li>
+                    Order Number: <b>{{ order_number }}</b>
+                </li>
+                <li>
+                    Price: {{ order_currency_symbol }}{{ order_amount }} {{ order_currency }}
+                </li>
+            </ul>
+            </p>
+            <p>
+                Tickets Included:
+            <ul>
+                 {% for ticket in tickets %}
+                    <li>
+                        <b>{{ ticket.number }}</b>
+                        <ul>
+                            <li>Type: {{ ticket.ticket_type_name }}</li>
+                            <li>
+                                {% if ticket.has_owner is defined and ticket.has_owner is sameas true %}
+                                    Attendee: {{ ticket.owner_email }}
+                                {% else %}
+                                    <span class="details_needed">Attendee: UNASSIGNED</span>
+                                {% endif %}
+                            </li>
+                            <li>
+                                Promo Code:
+                                {% if ticket.promo_code is defined %}
+                                    ({{ ticket.promo_code.code }})
+                                {% else %}
+                                    None
+                                {% endif %}
+                            </li>
+                            <li>Price: {{ticket.currency_symbol}}{{ ticket.price }} {{ ticket.currency}}</li>
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            </p>
+            <p>
+                You will be notified shortly regarding the status of this request.
+            </p>
+            <p>
+                Thank you! <br>
+                {{ summit_name }} Support Team
+            </p>    
+            <p>&nbsp; </p>
+            <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+        
+        
+        </div>
+    </div>
+</body>
+</html> 

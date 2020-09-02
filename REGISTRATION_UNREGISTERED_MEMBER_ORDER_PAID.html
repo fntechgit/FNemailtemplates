@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Order Confirmation, needs FNid | {{summit_name}}</title>
+    <!-- 
+    Template: REGISTRATION_UNREGISTERED_MEMBER_ORDER_PAID
+    Version: 2
+    Invoice based on https://github.com/sparksuite/simple-html-invoice-template
+    From Email: registration@fntech.com
+    Subject: {{summit_name}}: Order Confirmation, action still needed!
+    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+p, h1, h2, h3, h4, h5, h6, ul, li, a, body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+    margin: .25rem 0 .5rem;
+    text-rendering: optimizeLegibility;
+    color: #53585f;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #53585f;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    margin-top:1rem;
+}
+
+.is-teal {
+    color: #1c9b93;
+}
+
+.email-content {
+    padding: 1.75rem;
+}
+
+img.email-header {
+    height: 100%;
+    width: 100%;
+}
+
+ul {
+    margin: .25rem 0 1rem;
+    padding-left: 2rem;
+}
+
+li {
+    line-height: 1.25rem;
+    margin: .25rem;
+}
+
+.email-cta-container {
+        background-color: #00CEC4;
+        overflow: hidden;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        background-color: #00CEC4;
+        background-image: url('https://object-storage-ca-ymq-1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/images-fn/emails/white-corner.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+    }
+
+.email-cta {
+    background-color: #00CEC4;
+    width: 75%;
+    max-width: 75%;
+    float: right;
+    margin-bottom: 2rem;
+    clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+}
+
+.email-cta p {
+    margin-left: 3%;
+}
+
+.email-button {
+    text-align: center;
+    margin: 1rem 1rem 3rem;
+}
+
+.btn-primary:hover {
+    background-color: #00cec4;
+}
+
+.btn-primary {
+    box-sizing: border-box;
+    margin: 0;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    font-family: inherit;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+    background-color: #00a19a;
+    color: #ffffff;
+    border: none;
+}
+
+small {
+    line-height: 1;
+}
+
+/* Invoice CSS */
+
+.title h2,
+    .title p {
+        text-align: center;
+    }
+
+.invoice-box {
+        max-width: 800px;
+        margin: 0 auto 1rem;
+        padding: 30px;
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+    }
+
+    .invoice-box table tr.top {
+        padding: 1rem;
+    }
+
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+
+    .invoice-box table tr.top table td.title {
+        font-size: 24px;
+        line-height: 30px;
+        color: #333;
+    }
+
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+
+    .invoice-box table tr.details td {
+        padding-bottom: 10px;
+    }
+
+    .invoice-box table tr.total td:nth-child(2) {
+        border-top: 2px solid #eee;
+        font-weight: bold;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+ 
+    /** RTL **/
+    .rtl {
+        direction: rtl;
+        font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+    }
+
+    .rtl table {
+        text-align: right;
+    }
+
+    .rtl table tr td:nth-child(2) {
+        text-align: left;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="email-main">
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}" height="100%" width="100%"> -->
+        <div class="email-content">
+            <p>Hi {{ owner_full_name }},</p>
+            <p>Thank you for purchasing ticket(s) to attend <strong>{{ summit_name }}</strong>.</p>
+            <p>You do not currently have an FNid. Simply click the button below to create an FNid account:</p>
+            <p><a href="{{ set_password_link }}" target="_blank"><button class="btn btn-primary manage-btn">Create an FNid Account</button></a></p>
+            <p>&nbsp; </p>
+            <p>This is your order confirmation and details are below</p>
+            <p>&nbsp; </p>
+                <div class="invoice-box">
+                    <table cellpadding="0" cellspacing="0">
+                        <tr class="top">
+                            <td class="title" colspan="2">
+                                <h2>{{ summit_name }} Order Receipt</h2>
+                            </td>
+                        </tr>
+                        <tr class="heading">
+                            <td colspan="2">
+                                Your Order Details
+                            </td>
+                        </tr>
+            
+                        <tr class="details">
+                            <td>
+                            Order Number:
+                            </td>
+                            <td>
+                            <strong>{{ order_number }}</strong>
+                            </td>
+                        </tr>
+                        <tr class="details">
+                            <td>
+                            Purchaser:
+                            </td>
+                            <td>
+                            {{ owner_full_name }}
+                            </td>
+                        </tr>
+                        <tr class="details">
+                            <td>
+                            Company:
+                            </td>
+                            <td>
+                            {{ owner_company }}<br>
+                            </td>
+                        </tr>
+                        <tr class="details">
+                            <td>
+                            Amount Paid In Full:
+                            </td>
+                            <td>
+                            {{ order_currency_symbol }}{{ order_amount }} {{ order_currency }}
+                            </td>
+                        </tr>
+                        <tr class="heading">
+                            <td colspan="2">
+                                Tickets Included:
+                            </td>
+                        </tr>
+            
+                        <tr class="tickets">
+                            <td colspan="2">
+                            <ul>
+                            {% for ticket in tickets %}
+                                <li class="item">
+                                    <strong>{{ ticket.number }}</strong>
+                                    <ul>
+                                        <li>Type: {{ ticket.ticket_type_name }}</li>
+                                        <li>
+                                            {% if ticket.has_owner is defined and ticket.has_owner is sameas true %}
+                                                Attendee: {{ ticket.owner_email }}
+                                            {% else %}
+                                                <span class="details_needed">Attendee: UNASSIGNED</span>
+                                            {% endif %}
+                                        </li>
+                                        <li>
+                                            Promo Code:
+                                            {% if ticket.promo_code is defined %}
+                                                ({{ ticket.promo_code.code }})
+                                            {% else %}
+                                                None
+                                            {% endif %}
+                                        </li>
+                                        <li>Price: {{ticket.currency_symbol}}{{ ticket.price }} {{ ticket.currency}}</li>
+                                        {% if ticket.need_details is defined and  ticket.need_details is sameas true %}
+                                            <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
+                                        {% endif %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            <p>&nbsp; </p>
+            <p><strong>PLEASE NOTE!</strong><br />
+            <ul>
+                <li><strong>Tickets must be assigned and additional details must be provided before we are able to issue the official ticket(s).</strong></li>
+                <li>Tickets will not be issued if unassigned or incomplete.</li>
+                <li>Once a ticket is purchased and assigned to an individual, the ticket holder will receive an email with a link to enter any additional details required.</li>
+                <li>You must assign the ticket before the attendee details can be entered by you, the purchaser, or the ticket holder.</li>
+                <li>If you prefer to complete the required details yourself, you may do so on the “My Orders” page once you have <a href="{{ set_password_link }}" target="_blank">created an FNid Account</a></li>
+            </ul></p>
+            <p>Once all required details are entered, the ticket will be issued and emailed to the assigned ticket holder.</p>
+            <p>Thank you for yor order!<br>
+                Your {{ summit_name }} Support Team</p>
+            <p>&nbsp; </p>
+            <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+        </div>
+    </div>
+</body>
+</html>

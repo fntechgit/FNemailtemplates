@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>{{ summit_name }}: You have been registered, but action still needed! </title>
+    <!--
+    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
+    From Email: registration@fntech.com
+    Use Subject: You have been registered for {{ summit_name }}, but action still needed! 
+    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+    p, h1, h2, h3, h4, h5, h6, ul, li, a, body {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        line-height: 1.6rem;
+        margin: .25rem 0 .5rem;
+        text-rendering: optimizeLegibility;
+        color: #53585f;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        color: #53585f;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+        margin-top:1rem;
+    }
+
+    .is-teal {
+        color: #1c9b93;
+    }
+
+    .email-content {
+        padding: 1.75rem;
+    }
+
+    img.email-header {
+        height: 100%;
+        width: 100%;
+    }
+
+    ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+    }
+
+    li {
+        line-height: 1.25rem;
+        margin: .25rem;
+    }
+
+    .email-cta {
+        background-color: #00CEC4;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+    }
+
+    .email-cta p {
+        margin-left: 3%;
+    }
+
+    .email-button {
+        text-align: center;
+        margin: 1rem 1rem 3rem;
+    }
+
+    .btn-primary:hover {
+        background-color: #00cec4;
+    }
+
+    .btn-primary {
+        box-sizing: border-box;
+        margin: 0;
+        font: inherit;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        font-family: inherit;
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border-radius: 4px;
+        background-color: #00a19a;
+        color: #ffffff;
+        border: none;
+    }
+
+    small {
+        line-height: 1;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="email-main">
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Additional Information Required" height="100%" width="100%"> -->
+        <div class="email-content">
+            <p>Congratulations, {{ owner_full_name }}, has purchased the below ticket(s) for you to attend {{ summit_name }}. In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.</p>
+            <p>Current registration information is below:</p>
+                <ul>
+                  <li>Your ticket number:{{ ticket_number }}</li>
+                  <li>Type: {{ ticket_type_name }}</li>
+                  <li>Attendee: {{ owner_email }}</li>
+                  {% if need_details is defined and need_details is sameas true %}
+                  <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
+                  {% endif %}
+                </ul>
+            </p>
+            <p>Please note, your ticket <strong>HAS NOT</strong> been issued yet. To validate your ticket, click the button below to fill in all outstanding details. </p>
+            <p class="email-button"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Accept your ticket to {{ summit_name }}</button></a></p>
+            <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
+            <p>Your {{ summit_name }} Support Team</p>
+            <p>&nbsp; </p>
+            <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+        </div>
+    </div>
+</body>
+</html>
