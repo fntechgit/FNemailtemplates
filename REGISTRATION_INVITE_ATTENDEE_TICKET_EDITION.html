@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <!--
-    Template Name: REGISTRATION_ATTENDEE_TICKET
-    Version: 1
-    From Email: registration@fntech.com
-    Use Subject: {{ summit_name }}: Your ticket for {{ summit_name }}
-    -->
     <meta charset="utf-8">
-    <title>{{ summit_name }}: Your ticket for {{ summit_name }} </title>
+    <title>Additional Information Required</title>
+    <!--
+    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
+    Version: 2
+    From Email: registration@fntech.com
+    Use Subject: {{summit_name}}: You are registered, but action still needed! 
+    -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -23,10 +23,10 @@
     p {
         font-size: 1rem;
         font-weight: 400;
+        color: #53585f;
     }
 
     h1 {
-        color: #1c9b93;
         font-size: 1.75rem;
         font-weight: 300;
         line-height: 1.75rem;
@@ -34,8 +34,7 @@
         margin-top:1rem;
     }
 
-    p.is-teal,
-    .is-teal li {
+    .is-teal {
         color: #1c9b93;
     }
 
@@ -45,7 +44,7 @@
 
     img.email-header {
         height: 100%;
-        width:100%;
+        width: 100%;
     }
 
     ul {
@@ -112,28 +111,30 @@
     </style>
 </head>
 <body>
-
     <div class="email-main">
-        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Official Ticket Info" height="100%" width="100%"> -->
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{summit_name}}: Additional Information Required" height="100%" width="100%"> -->
         <div class="email-content">
-            <p>Thanks {{ owner_full_name }}!</p> 
-            <p>You have provided the additional details required to issue your ticket for {{ summit_name }}.</p>
-            <p>
-            <p><strong>When the event is live, you will be able to log into {{ summit_name }} by accessing {{ summit_marketing_site_url }} with your FNid using {{ owner_email }} </strong>. You may access your FNid account and update your profile by <a href="https://idp.fntech.com/accounts/user/profile">clicking here</a>. </p>
-             
-            <p>For reference:<br/>
-            <ul>
-                <li>Your ticket number: {{ ticket_number }}</li>
-                <li>Type: {{ ticket_type_name }}</li>
-                <li>Attendee: {{ owner_email }}</li>
-            </ul>
+            <p>Hi {{owner_full_name}},</p>
+            <p>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</p>
+            <p><strong>In order to issue your ticket, you must provide <a class="button-link" target="_blank" href="{{ edit_ticket_link }}">provide additional details.</a>.</strong></p>
+            <p class="email-button"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Provide ticket details now</button></a></p>
+            <p>Your registration information is below:<br>
+                <ul>
+                  <li>Ticket number: {{ ticket_number }}</li>
+                  <li>Type: {{ ticket_type_name }}</li>
+                  <li>Attendee: {{ owner_email }}</li>
+                  {% if need_details is defined and need_details is sameas true %}
+                  <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
+                  {% endif %}
+                </ul>
             </p>
-            <p>We look forward to seeing you at <a href="{{summit_marketing_site_url}}" target="_blank">{{ summit_name }}</a>. </p>
-            <p>Thank you!</p>
-            <p>{{ summit_name }} Support Team</p>
+            <p>Once the required additional details have been completed, you will receive another email with your ticket confirmation.</p>
+            <p>If you do not wish to accept this ticket, please email {{ order_owner_full_name }} at <a href="mailto:{{order_owner_email}}?subject=RE:%20ticket%20to%20{{summit_name}}" >{{ order_owner_email }}</a>, so that your ticket may be assigned to another person.
+            <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
+            <p>Your {{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
             <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
         </div>
     </div>
 </body>
-</html> 
+</html>
