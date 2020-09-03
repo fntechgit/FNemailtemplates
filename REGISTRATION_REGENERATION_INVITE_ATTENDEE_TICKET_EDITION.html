@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="utf-8">
-    <title>{{ summit_name }}: You have been registered, but action still needed! </title>
     <!--
-    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
+    Template Name: REGISTRATION_REGENERATION_INVITE_ATTENDEE_TICKET_EDITION
     From Email: registration@fntech.com
     Use Subject: You have been registered for {{ summit_name }}, but action still needed! 
     -->
+    <meta charset="utf-8">
+    <title>{{ summit_name }}: You have been registered, but action still needed! </title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -22,19 +22,15 @@
     p {
         font-size: 1rem;
         font-weight: 400;
-        color: #53585f;
     }
 
     h1 {
+        color: #5e5f62;
         font-size: 1.75rem;
         font-weight: 300;
         line-height: 1.75rem;
         margin-bottom: 1.5rem;
         margin-top:1rem;
-    }
-
-    .is-teal {
-        color: #1c9b93;
     }
 
     .email-content {
@@ -43,7 +39,7 @@
 
     img.email-header {
         height: 100%;
-        width: 100%;
+        width:100%;
     }
 
     ul {
@@ -57,7 +53,7 @@
     }
 
     .email-cta {
-        background-color: #00CEC4;
+        background-color: #5e5f62;
         width: 75%;
         max-width: 75%;
         float: right;
@@ -75,7 +71,7 @@
     }
 
     .btn-primary:hover {
-        background-color: #00cec4;
+        background-color: #77787c;
     }
 
     .btn-primary {
@@ -98,7 +94,7 @@
         user-select: none;
         background-image: none;
         border-radius: 4px;
-        background-color: #00a19a;
+        background-color: #5e5f62;
         color: #ffffff;
         border: none;
     }
@@ -106,7 +102,6 @@
     small {
         line-height: 1;
     }
-
     </style>
 </head>
 <body>
@@ -127,9 +122,9 @@
             <p>Please note, your ticket <strong>HAS NOT</strong> been issued yet. To validate your ticket, click the button below to fill in all outstanding details. </p>
             <p class="email-button"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Accept your ticket to {{ summit_name }}</button></a></p>
             <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
-            <p>Your {{ summit_name }} Support Team</p>
+            <p>{{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
-            <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+            <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
         </div>
     </div>
 </body>

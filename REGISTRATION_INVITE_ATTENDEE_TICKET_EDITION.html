@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <meta charset="utf-8">
-    <title>Additional Information Required</title>
     <!--
     Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
     Version: 2
     From Email: registration@fntech.com
     Use Subject: {{summit_name}}: You are registered, but action still needed! 
     -->
+    <meta charset="utf-8">
+    <title>Additional Information Required</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -23,19 +23,15 @@
     p {
         font-size: 1rem;
         font-weight: 400;
-        color: #53585f;
     }
 
     h1 {
+        color: #5e5f62;
         font-size: 1.75rem;
         font-weight: 300;
         line-height: 1.75rem;
         margin-bottom: 1.5rem;
         margin-top:1rem;
-    }
-
-    .is-teal {
-        color: #1c9b93;
     }
 
     .email-content {
@@ -44,7 +40,7 @@
 
     img.email-header {
         height: 100%;
-        width: 100%;
+        width:100%;
     }
 
     ul {
@@ -58,7 +54,7 @@
     }
 
     .email-cta {
-        background-color: #00CEC4;
+        background-color: #5e5f62;
         width: 75%;
         max-width: 75%;
         float: right;
@@ -76,7 +72,7 @@
     }
 
     .btn-primary:hover {
-        background-color: #00cec4;
+        background-color: #77787c;
     }
 
     .btn-primary {
@@ -99,7 +95,7 @@
         user-select: none;
         background-image: none;
         border-radius: 4px;
-        background-color: #00a19a;
+        background-color: #5e5f62;
         color: #ffffff;
         border: none;
     }
@@ -107,7 +103,6 @@
     small {
         line-height: 1;
     }
-
     </style>
 </head>
 <body>
@@ -116,7 +111,7 @@
         <div class="email-content">
             <p>Hi {{owner_full_name}},</p>
             <p>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</p>
-            <p><strong>In order to issue your ticket, you must provide <a class="button-link" target="_blank" href="{{ edit_ticket_link }}">provide additional details.</a>.</strong></p>
+            <p><strong>In order to issue your ticket, you must <a class="button-link" target="_blank" href="{{ edit_ticket_link }}">provide or verify additional details.</a>.</strong></p>
             <p class="email-button"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Provide ticket details now</button></a></p>
             <p>Your registration information is below:<br>
                 <ul>
@@ -130,10 +125,11 @@
             </p>
             <p>Once the required additional details have been completed, you will receive another email with your ticket confirmation.</p>
             <p>If you do not wish to accept this ticket, please email {{ order_owner_full_name }} at <a href="mailto:{{order_owner_email}}?subject=RE:%20ticket%20to%20{{summit_name}}" >{{ order_owner_email }}</a>, so that your ticket may be assigned to another person.
-            <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
-            <p>Your {{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
-            <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+            <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
+            <p>{{ summit_name }} Support Team</p>
+            <p>&nbsp; </p>
+            <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
         </div>
     </div>
 </body>
