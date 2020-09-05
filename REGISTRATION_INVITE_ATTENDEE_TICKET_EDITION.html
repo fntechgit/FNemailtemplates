@@ -8,7 +8,7 @@
     Use Subject: {{summit_name}}: You are registered, but action still needed! 
     -->
     <meta charset="utf-8">
-    <title>Additional Information Required</title>
+    <title>Additional Information Required from invitee</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -67,8 +67,8 @@
     }
 
     .email-button {
-        text-align: center;
-        margin: 1rem 1rem 3rem;
+        text-align: left;
+        margin: 1rem 0;
     }
 
     .btn-primary:hover {
@@ -111,7 +111,7 @@
         <div class="email-content">
             <p>Hi {{owner_full_name}},</p>
             <p>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</p>
-            <p><strong>In order to issue your ticket, you must <a class="button-link" target="_blank" href="{{ edit_ticket_link }}">provide or verify additional details.</a>.</strong></p>
+            <p><strong>In order to issue your ticket, you must <a class="button-link" target="_blank" href="{{ edit_ticket_link }}">provide or verify additional details</a>.</strong></p>
             <p class="email-button"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Provide ticket details now</button></a></p>
             <p>Your registration information is below:<br>
                 <ul>
@@ -126,7 +126,7 @@
             <p>Once the required additional details have been completed, you will receive another email with your ticket confirmation.</p>
             <p>If you do not wish to accept this ticket, please email {{ order_owner_full_name }} at <a href="mailto:{{order_owner_email}}?subject=RE:%20ticket%20to%20{{summit_name}}" >{{ order_owner_email }}</a>, so that your ticket may be assigned to another person.
             <p>&nbsp; </p>
-            <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
+            <p>We look forward to issuing your ticket and seeing you at {{ summit_name }},</p>
             <p>{{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
             <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>

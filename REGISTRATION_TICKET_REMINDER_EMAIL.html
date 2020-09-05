@@ -67,8 +67,8 @@
     }
 
     .email-button {
-        text-align: center;
-        margin: 1rem 1rem 3rem;
+        text-align: left;
+        margin: 1rem 0;
     }
 
     .btn-primary:hover {
@@ -109,11 +109,12 @@
     <div class="email-main">
         <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Official Ticket Info" height="100%" width="100%"> -->
         <div class="email-content">
-            <p>Hey {{ owner_full_name }} you still have not claimed your ticket to {{ summit_name }} because we still need you to enter additional details.
-            <p>Please <a href="{{ edit_ticket_link }}" target="_blank">click here</a> to enter your details and claim your ticket.</p>
+            <p>Hi {{ owner_full_name }},<br />
+            You have been invited to {{ summit_name }} but your ticket <strong>*HAS NOT*</strong> been issued yet.</p>
+            <p>In order to issue your ticket, <a href="{{ edit_ticket_link }}" target="_blank">click here to provide of verify additional details</a>.</p>
             <p><a target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Accept your ticket to {{ summit_name }}</button></a></p>
             <p>&nbsp; </p>
-            <p>We look forward to seeing you at {{ summit_name }}.</p>
+            <p>We look forward issuing your ticket and seeing you at {{ summit_name }}.</p>
             <p>Thank you! <br>
             {{ summit_name }} Support Team
             </p>

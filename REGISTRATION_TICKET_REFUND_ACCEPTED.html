@@ -67,8 +67,8 @@
     }
 
     .email-button {
-        text-align: center;
-        margin: 1rem 1rem 3rem;
+        text-align: left;
+        margin: 1rem 0;
     }
 
     .btn-primary:hover {
@@ -109,50 +109,36 @@
     <div class="email-main">
         <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{summit_name}}: Official Ticket Info" height="100%" width="100%"> -->
         <div class="email-content">
-            <p>
-                Hi {{ owner_full_name }}, your refund request for <b>{{ summit_name }}</b> has been accepted.
+            <p>Hi {{ owner_full_name }},<br />
+            Your refund request for <b>{{ summit_name }}</b> has been accepted.</p>
+            <p>A refund has been issued for the following ticket:</p>
+            <p><b>{{ ticket_number }}</b><br />
+                <ul>
+                    <li>Type: {{ ticket_type_name }}</li>
+                    <li>
+                       {% if ticket_owner is defined and ticket_owner|length %}
+                            ({{ ticket_owner }})
+                       {% else %}
+                            <span class="details_needed">Attendee: UNASSIGNED</span>
+                       {% endif %}
+                    </li>
+                    <li>
+                        Promo Code:
+                         {% if ticket_promo_code is defined and ticket_promo_code|length %}
+                            ({{ ticket_promo_code }})
+                        {% else %}
+                            None
+                       {% endif %}
+                    </li>
+                    <li>Price: {{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</li>
+                </ul>
             </p>
-            <p>
-                A refund has been issued for the following order:
-            </p>
-            <p>
-            <ul class="order_list">
-                <li>
-                    Order Number: <b>{{ order_number }}</b>
-                </li>
-                <li>
-                    Price: {{ order_currency_symbol }}{{ order_amount }} {{ order_currency }}
-                </li>
-            </ul>
-            </p>
-            <p>Ticket(s) Included:</p>
-            <b>{{ ticket_number }}</b>
-            <ul>
-                <li>Type: {{ ticket_type_name }}</li>
-                <li>
-                   {% if ticket_owner is defined and ticket_owner|length %}
-                        Attendee: {{ ticket_owner }}
-                   {% else %}
-                        <span class="details_needed">Attendee: UNASSIGNED</span>
-                   {% endif %}
-                </li>
-                <li>
-                    Promo Code:
-                     {% if ticket_promo_code is defined and ticket_promo_code|length %}
-                        ({{ ticket_promo_code }})
-                    {% else %}
-                        None
-                   {% endif %}
-                </li>
-                <li>Price: {{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</li>
-
-            </p>
-            <p>You should see the refund process in the next 3-5 business days.</p>
+            <p>You should see the refund processed in the next 3-5 business days.</p>
             <p>Thank you! <br>
             {{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
             <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
-        
         </div>
     </div>
 </body>
+</html>
