@@ -5,7 +5,7 @@
     Template Name: REGISTRATION_ATTENDEE_TICKET
     Version: 1
     From Email: registration@fntech.com
-    Use Subject: {{ summit_name }}: Your ticket for {{ summit_name }}
+    Use Subject: Your ticket for {{ summit_name }}
     -->
     <meta charset="utf-8">
     <title>Ticket for {{ summit_name }} </title>
@@ -112,9 +112,8 @@
         <div class="email-content">
             <p>Thanks {{ owner_full_name }}!</p> 
             <p>You have provided the additional details required to issue your ticket for {{ summit_name }}.</p>
-            <p>
-            <p><strong>When the event is live, you will be able to log in to {{ summit_name }} by accessing <a href="{{summit_marketing_site_url}}" target="_blank">{{summit_marketing_site_url}}</a> with your FNid using {{ owner_email }} </strong>. You may access your FNid account and update your profile by <a href="https://idp.fntech.com/accounts/user/profile">clicking here</a>. </p>
-             
+            <p><strong>When the event is live, you will be able to log in to <a href="{{ summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a> with your FNid using {{ owner_email }} </strong>.</p>
+            <p>You may access your FNid account and update your profile by <a href="https://idp.fntech.com/accounts/user/profile">clicking here</a>.</p>
             <p>For reference:<br/>
             <ul>
                 <li>Your ticket number: {{ ticket_number }}</li>
@@ -123,8 +122,8 @@
             </ul>
             </p>
             <p>We look forward to seeing you at <a href="{{summit_marketing_site_url}}" target="_blank">{{ summit_name }}</a>. </p>
-            <p>Thank you!</p>
-            <p>{{ summit_name }} Support Team</p>
+            <p>Thank you!<br />
+            {{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
             <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
         </div>
