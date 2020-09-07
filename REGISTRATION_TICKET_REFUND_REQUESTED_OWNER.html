@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!--
+    Template Name: REGISTRATION_TICKET_REFUND_REQUESTED_OWNER
+    Version: 1
+    From Email: registration@fntech.com
+    Use Subject: Your ticket refund request for {{summit_name}} has been received
+    -->
+    <meta charset="utf-8">
+    <title>Ticket Refund request has been received</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+    p, h1, h2, h3, h4, h5, h6, ul, li, a, body {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        line-height: 1.6rem;
+        margin: .25rem 0 .5rem;
+        text-rendering: optimizeLegibility;
+        color: #53585f;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    h1 {
+        color: #5e5f62;
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+        margin-top:1rem;
+    }
+
+    .email-content {
+        padding: 1.75rem;
+    }
+
+    img.email-header {
+        height: 100%;
+        width:100%;
+    }
+
+    ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+    }
+
+    li {
+        line-height: 1.25rem;
+        margin: .25rem;
+    }
+
+    .email-cta {
+        background-color: #5e5f62;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+    }
+
+    .email-cta p {
+        margin-left: 3%;
+    }
+
+    .email-button {
+        text-align: left;
+        margin: 1rem 0;
+    }
+
+    .btn-primary:hover {
+        background-color: #77787c;
+    }
+
+    .btn-primary {
+        box-sizing: border-box;
+        margin: 0;
+        font: inherit;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        font-family: inherit;
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border-radius: 4px;
+        background-color: #5e5f62;
+        color: #ffffff;
+        border: none;
+    }
+
+    small {
+        line-height: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="email-main">
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{summit_name}}" height="100%" width="100%"> -->
+        <div class="email-content">
+            <p>Hi {{ owner_full_name }},<br />
+            Your refund request for <b>{{ summit_name }}</b> has been received.</p>
+            <p>Your refund request was for the ticket:</p>
+            <p>
+            <b>{{ ticket_number }}</b>
+            <ul>
+                <li>Type: {{ ticket_type_name }}</li>
+                <li>
+                   {% if ticket_owner is defined and ticket_owner|length %}
+                        ({{ ticket_owner }})
+                   {% else %}
+                        <span class="details_needed">Attendee: UNASSIGNED</span>
+                   {% endif %}
+                </li>
+                <li>
+                    Promo Code:
+                     {% if ticket_promo_code is defined and ticket_promo_code|length %}
+                        ({{ ticket_promo_code }})
+                    {% else %}
+                        None
+                   {% endif %}
+                </li>
+                <li>Price: {{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</li>
+            </ul>
+            </p>
+            <p>You will be notified shortly if your refund request is approved or not.</p>
+            <p>Thank you! <br>
+            {{ summit_name }} Support Team</p>
+            <p>&nbsp; </p>
+            <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+        </div>
+    </div>
+</body>
+</html>

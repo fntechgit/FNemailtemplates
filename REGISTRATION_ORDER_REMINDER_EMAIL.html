@@ -107,14 +107,15 @@
 </head>
 <body>
     <div class="email-main">
-        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Official Ticket Info" height="100%" width="100%"> -->
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}" height="100%" width="100%"> -->
         <div class="email-content">
             <p>Hi {{ owner_full_name }},</p>
             <p>Your ticket(s) for {{ summit_name }} *HAVE NOT* been accepted.</p>
-            <p>If you have not assigned your ticket(s), please go to the "<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>" page to assign your ticket(s) by {{ summit_reassign_ticket_till_date }}.</p>
-            <p>If you have assigned your ticket(s), please ask the ticket holder to complete the additional details required by {{ summit_reassign_ticket_till_date }}. If you prefer to complete the required details yourself, you may do so on the “<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>” page.
-            </p>
-            <p>You must assign the ticket before the attendee details can be entered by you, the purchaser, or the ticket holder.</p>
+            <ul>
+                <li>If you have not assigned your ticket(s), please go to the "<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>" page to assign your ticket(s) by {{ summit_reassign_ticket_till_date }}.</li>
+                <li>If you have assigned your ticket(s), please ask the ticket holder to complete the additional details required by {{ summit_reassign_ticket_till_date }}. If you prefer to complete the required details yourself, you may do so on the “<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>” page.</li>
+                <li>You must assign the ticket before the attendee details can be entered by you, the purchaser, or the ticket holder.</li>
+            </ul>
             <p><strong>Once all required details are entered, the ticket will be issued and emailed to the assigned ticket holder.</strong> Tickets will not be issued if unassigned or incomplete.</p>
             <p><a target="_blank" href="{{ manage_orders_url }}"><button class="btn btn-primary manage-btn">Manage "My Orders"</button></a></p>
             <p>
