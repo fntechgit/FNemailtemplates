@@ -5,10 +5,10 @@
     Template Name: REGISTRATION_REVOCATION_TICKET
     Version: 1
     From Email: registration@fntech.com
-    Use Subject: {{ summit_name }}: Your registration for {{ summit_name }} has been cancelled
+    Use Subject: Your registration for {{ summit_name }} has been cancelled
     -->
     <meta charset="utf-8">
-    <title>{{ summit_name }}: Your registration for {{ summit_name }} has been cancelled</title>
+    <title>Your registration for {{ summit_name }} has been cancelled</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -67,8 +67,8 @@
     }
 
     .email-button {
-        text-align: center;
-        margin: 1rem 1rem 3rem;
+        text-align: left;
+        margin: 1rem 0;
     }
 
     .btn-primary:hover {
@@ -107,25 +107,15 @@
 </head>
 <body>
     <div class="email-main">
-        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Official Ticket Info" height="100%" width="100%"> -->
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}" height="100%" width="100%"> -->
         <div class="email-content">
-            <p>
-                Hi {{ owner_full_name }},
-            </p>
-            <p>
-                Your registration for {{ summit_name }} has been cancelled or reassigned. You are no longer
-                registered to attend this event. 
-            </p>
-            <p>
-                Should you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information. You may also contact us at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
-            </p>
-            <p>
-                We hope to see you at a future event. Thank you! <br>
-                {{ summit_name }} Support Team
-            </p>
+            <p>Hi {{ owner_full_name }},</p>
+            <p>Your registration for {{ summit_name }} has been cancelled or reassigned. You are no longer registered to attend this event.</p>
+            <p>Should you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information.</p>
+            <p>We hope to see you at a future event. Thank you! <br>
+            {{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
             <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
-        
         </div>
     </div>
 </body>

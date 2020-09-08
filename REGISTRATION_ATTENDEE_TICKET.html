@@ -108,12 +108,12 @@
 <body>
 
     <div class="email-main">
-        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Official Ticket Info" height="100%" width="100%"> -->
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}" height="100%" width="100%"> -->
         <div class="email-content">
             <p>Thanks {{ owner_full_name }}!</p> 
             <p>You have provided the additional details required to issue your ticket for {{ summit_name }}.</p>
             <p><strong>When the event is live, you will be able to log in to <a href="{{ summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a> with your FNid using {{ owner_email }} </strong>.</p>
-            <p>You may access your FNid account and update your profile by <a href="https://idp.fntech.com/accounts/user/profile">clicking here</a>.</p>
+            <p>You may access your FNid account and update your profile by <a href="{{ summit_marketing_site_url }}">clicking here</a>.</p>
             <p>For reference:<br/>
             <ul>
                 <li>Your ticket number: {{ ticket_number }}</li>
