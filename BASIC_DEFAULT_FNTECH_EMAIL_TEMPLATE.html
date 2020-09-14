@@ -2,13 +2,13 @@
 <html lang="en-US">
 <head>
     <!--
-    Template Name: REGISTRATION_ATTENDEE_TICKET
-    Version: 1
+    Template Name: EMAIL_TEMPLATE_NAME_HERE
+    Version: 
     From Email: registration@fntech.com
-    Use Subject: Your ticket for {{ summit_name }}
+    Use Subject: {{summit_name}}: DESIRED SUBJECT LINE HERE
     -->
     <meta charset="utf-8">
-    <title>Ticket for {{ summit_name }} </title>
+    <title>TEMPLATE SHORT DESCRIPTION | {{summit_name}} </title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
@@ -107,25 +107,22 @@
 </head>
 <body>
     <div class="email-main">
-        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}" height="100%" width="100%"> -->
+        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{summit_name}}: Official Ticket Info" height="100%" width="100%"> -->
         <div class="email-content">
-            <p>Thanks {{ owner_full_name }}!</p> 
-            <p>You have provided the additional details required to issue your ticket for {{ summit_name }}.</p>
-            <p><strong>When the event is live, you will be able to log in to <a href="{{ summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a> with your FNid using {{ owner_email }} </strong>.</p>
-            <p>You may access your FNid account and update your profile by <a href="{{ summit_marketing_site_url }}">clicking here</a>.</p>
-            <p>For reference:<br/>
+            <p>Hi,</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>
+            <p><a href="LINK URL OR VARIABLE HERE" target="_blank"><button class="btn btn-primary manage-btn">EXAMPLE BUTTON</button></a></p>
             <ul>
-                <li>Your ticket number: {{ ticket_number }}</li>
-                <li>Type: {{ ticket_type_name }}</li>
-                <li>Attendee: {{ owner_email }}</li>
+                <li>LIST ITEM</li>
+                <li>LIST ITEM</li>
+                <li>LIST ITEM</li>
             </ul>
-            </p>
-            <p>We look forward to seeing you at <a href="{{summit_marketing_site_url}}" target="_blank">{{ summit_name }}</a>. </p>
-            <p>Thank you!<br />
-            {{ summit_name }} Support Team</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Your {{ summit_name }} Support Team</p>
             <p>&nbsp; </p>
-            <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
+            <p><small>PS:Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
         </div>
     </div>
 </body>
-</html> 
+</html>
