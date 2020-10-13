@@ -53,6 +53,11 @@
         margin: .25rem;
     }
 
+    .details_needed {
+        color: red;
+        font-weight: 600;
+    }
+
     .email-cta {
         background-color: #5e5f62;
         width: 75%;
@@ -117,7 +122,7 @@
             <ul>
                 <li>LIST ITEM</li>
                 <li>LIST ITEM</li>
-                <li>LIST ITEM</li>
+                <li><span class="details_needed">THIS LIST ITEM NEEDS ATTENTION</span></li>
             </ul>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <p>Your {{ summit_name }} Support Team</p>
