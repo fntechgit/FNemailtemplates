@@ -1,136 +1,225 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <!--
-    Template Name: REGISTRATION_REGENERATION_INVITE_ATTENDEE_TICKET_EDITION
-    From Email: registration@fntech.com
-    Use Subject: {{summit_name}}: You are registered, but action still needed! 
-    -->
-    <meta charset="utf-8">
-    <title>Additional Information Required (Regeneration)| {{ summit_name }}</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
-    p, h1, h2, h3, h4, h5, h6, ul, li, a, body {
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-        line-height: 1.6rem;
-        margin: .25rem 0 .5rem;
-        text-rendering: optimizeLegibility;
-        color: #53585f;
+<head>
+  <title> Additional Information Required (Regeneration)| {{ summit_name }}
+  </title>
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    #outlook a {
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
     }
 
     p {
-        font-size: 1rem;
-        font-weight: 400;
+      display: block;
+      margin: 13px 0;
     }
 
-    h1 {
-        color: #5e5f62;
-        font-size: 1.75rem;
-        font-weight: 300;
-        line-height: 1.75rem;
-        margin-bottom: 1.5rem;
-        margin-top:1rem;
+  </style>
+  <!--[if mso]>
+    <noscript>
+    <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    </noscript>
+    <![endif]-->
+  <!--[if lte mso 11]>
+    <style type="text/css">
+      .mj-outlook-group-fix { width:100% !important; }
+    </style>
+    <![endif]-->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700);
+
+  </style>
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (min-width:480px) {
+      .mj-column-per-100 {
+        width: 100% !important;
+        max-width: 100%;
+      }
     }
 
-    .email-content {
-        padding: 1.75rem;
+  </style>
+  <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-100 {
+      width: 100% !important;
+      max-width: 100%;
     }
 
-    img.email-header {
-        height: 100%;
-        width:100%;
+  </style>
+  <style type="text/css">
+  </style>
+  <style type="text/css">
+    p {
+      font-size: 1rem;
+      font-weight: 400;
     }
 
     ul {
-        margin: .25rem 0 1rem;
-        padding-left: 2rem;
+      margin: .25rem 0 1rem;
+      padding-left: 2rem;
     }
 
     li {
-        line-height: 1.25rem;
-        margin: .25rem;
+      line-height: 1.25rem;
+      margin: .25rem;
+    }
+
+    a {
+      color: #53585F;
     }
 
     .details_needed {
-        color: red;
-        font-weight: 600;
-    }
-
-    .email-cta {
-        background-color: #5e5f62;
-        width: 75%;
-        max-width: 75%;
-        float: right;
-        margin-bottom: 2rem;
-        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
-    }
-
-    .email-cta p {
-        margin-left: 3%;
-    }
-
-    .email-button {
-        text-align: center;
-        margin: 1rem 1rem 3rem;
+      color: red;
+      font-weight: 600;
     }
 
     .btn-primary:hover {
-        background-color: #77787c;
+      background-color: #77787c;
     }
 
     .btn-primary {
-        box-sizing: border-box;
-        margin: 0;
-        font: inherit;
-        overflow: visible;
-        text-transform: none;
-        -webkit-appearance: button;
-        font-family: inherit;
-        display: inline-block;
-        padding: 6px 12px;
-        font-weight: 400;
-        line-height: 1.42857143;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
-        user-select: none;
-        background-image: none;
-        border-radius: 4px;
-        background-color: #5e5f62;
-        color: #ffffff!important;
-        border: none;
+      box-sizing: border-box;
+      margin: 0;
+      font: inherit;
+      overflow: visible;
+      text-transform: none;
+      -webkit-appearance: button;
+      font-family: inherit;
+      display: inline-block;
+      padding: 6px 12px;
+      font-weight: 400;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      touch-action: manipulation;
+      cursor: pointer;
+      user-select: none;
+      background-image: none;
+      border-radius: 4px;
+      background-color: #5e5f62;
+      color: #ffffff !important;
+      border: none;
     }
 
-    small {
-        line-height: 1;
-    }
-    </style>
+  </style>
+  <!-- Template Name: REGISTRATION_REGENERATION_INVITE_ATTENDEE_TICKET_EDITION
+    From Email: registration@fntech.com
+    Use Subject: {{summit_name}}: You are registered, but action still needed! -->
 </head>
-<body>
-    <div class="email-main">
-        <!-- <img class="email-header" src="EVENT HEADER IMG URL HERE" alt="{{ summit_name }}: Additional Information Required" height="100%" width="100%"> -->
-        <div class="email-content">
-            <p>Congratulations, {{ owner_full_name }}, has purchased the below ticket(s) for you to attend {{ summit_name }}. In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.</p>
-            <p>Current registration information is below:</p>
-                <ul>
-                  <li>Your ticket number:{{ ticket_number }}</li>
-                  <li>Type: {{ ticket_type_name }}</li>
-                  <li>Attendee: {{ owner_email }}</li>
-                  {% if need_details is defined and need_details is sameas true %}
-                  <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
-                  {% endif %}
-                </ul>
-            </p>
-            <p>Please note, your ticket <strong>HAS NOT</strong> been issued yet. To validate your ticket, click the button below to fill in all outstanding details. </p>
-            <p class="email-button"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Accept your ticket to {{ summit_name }}</button></a></p>
-            <p>We look forward to issuing your ticket and seeing you at the {{ summit_name }},</p>
-            <p>{{ summit_name }} Support Team</p>
-            <p>&nbsp; </p>
-            <p><small>PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</small></p>
-        </div>
+
+<body style="word-spacing:normal;">
+  <div style="">
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:700px;" width="700" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:700px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:700px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+                    <tr>
+                      <td style="font-size:0px;word-break:break-word;">
+                        <div style="height:18px;line-height:18px;">&#8202;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Congratulations, {{ owner_full_name }}, has purchased the below ticket(s) for you to attend {{ summit_name }}. In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Current registration information is below:</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">
+                          <ul>
+                            <li>Your ticket number:{{ ticket_number }}</li>
+                            <li>Type: {{ ticket_type_name }}</li>
+                            <li>Attendee: {{ owner_email }}</li> {% if need_details is defined and need_details is sameas true %} <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li> {% endif %}
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Please note, your ticket <strong>HAS NOT</strong> been issued yet. To validate your ticket, click the button below to fill in all outstanding details.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Accept your ticket to {{ summit_name }}</button></a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to issuing your ticket and seeing you at the {{ summit_name }}, <br />
+                          {{ summit_name }} Support Team
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:0px;word-break:break-word;">
+                        <div style="height:18px;line-height:18px;">&#8202;</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:13px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+    <!--[if mso | IE]></td></tr></table><![endif]-->
+  </div>
 </body>
+
 </html>
