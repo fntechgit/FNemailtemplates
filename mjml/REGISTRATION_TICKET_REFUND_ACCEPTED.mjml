@@ -1,0 +1,115 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_TICKET_REFUND_ACCEPTED
+    Version: 1
+    From Email: registration@fntech.com
+    Use Subject: Your ticket refund request for {{summit_name}} has been accepted
+    -->
+    <mj-title>Ticket Refund request has been accepted</mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+      .btn-primary:hover {
+        background-color: #77787c;
+      }
+
+      .btn-primary {
+        box-sizing: border-box;
+        margin: 0;
+        font: inherit;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        font-family: inherit;
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border-radius: 4px;
+        background-color: #5e5f62;
+        color: #ffffff !important;
+        border: none;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-spacer height="18px" />
+        <mj-text>
+          Hi {{ owner_full_name }},<br />
+          Your refund request for <strong>{{ summit_name }</strong> has been accepted.
+        </mj-text>
+        <mj-text>A refund has been issued for the following ticket:</mj-text>
+        <mj-text>
+            <strong>{{ ticket_number }</strong><br />
+            <ul>
+            <li>Type: {{ ticket_type_name }}</li>
+            <li>
+              {% if ticket_owner is defined and ticket_owner|length %}
+              ({{ ticket_owner }})
+              {% else %}
+              <span class="details_needed">Attendee: UNASSIGNED</span>
+              {% endif %}
+            </li>
+            <li>
+              Promo Code:
+              {% if ticket_promo_code is defined and ticket_promo_code|length %}
+              ({{ ticket_promo_code }})
+              {% else %}
+              None
+              {% endif %}
+            </li>
+            <li>Price: {{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</li>
+            </ul>
+        </mj-text>
+        <mj-text>You should see the refund processed in the next 3-5 business days.</mj-text>
+        <mj-text>Thank you! <br />
+          {{ summit_name }} Support Team
+        </mj-text>
+
+        <mj-spacer height="18px" />
+
+        <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
+          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

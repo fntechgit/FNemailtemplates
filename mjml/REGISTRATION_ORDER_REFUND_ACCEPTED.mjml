@@ -1,0 +1,96 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_ORDER_REFUND_ACCEPTED
+    Version: 1
+    From Email: registration@fntech.com
+    Use Subject: {{summit_name}}: Your order refund request has been accepted
+    -->
+    <mj-title>Order refund request has been accepted {{summit_name}}</mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-spacer height="18px" />
+        <mj-text>Your refund request for {{ summit_name }} has been accepted. A refund was issued for the following order:</mj-text>
+        <mj-text>
+          <ul class="order_list">
+            <li>Order Number: <b>{{ order_number }}</b></li>
+            <li>Price: {{ order_currency_symbol }}{{ order_amount }} {{ order_currency }}</li>
+          </ul>
+        </mj-text>
+        <mj-text>Tickets Included:<br /></mj-text>
+        <mj-text>
+          <ul>
+            {% for ticket in tickets %}
+            <li>
+              <b>{{ ticket.number }}</b>
+              <ul>
+                <li>Type: {{ ticket.ticket_type_name }}</li>
+                <li>
+                  {% if ticket.has_owner is defined and ticket.has_owner is sameas true %}
+                  Attendee: {{ ticket.owner_email }}
+                  {% else %}
+                  <span class="details_needed">Attendee: UNASSIGNED</span>
+                  {% endif %}
+                </li>
+                <li>
+                  Promo Code:
+                  {% if ticket.promo_code is defined %}
+                  ({{ ticket.promo_code.code }})
+                  {% else %}
+                  None
+                  {% endif %}
+                </li>
+                <li>Price: {{ticket.currency_symbol}}{{ ticket.price }} {{ ticket.currency}}</li>
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
+        </mj-text>
+        <mj-text>You should see the refund processed in the next 3 - 5 business days.</mj-text>
+        <mj-text>
+          Thank you!<br />
+          {{ summit_name }} Support Team
+        </mj-text>
+
+        <mj-spacer height="18px" />
+
+        <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
+          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

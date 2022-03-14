@@ -1,0 +1,153 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_ATTENDEE_TICKET
+    Version: 1
+    From Email: registration@fntech.com
+    Use Subject: Your ticket for {{ summit_name }}
+    -->
+    <mj-title>Ticket for {{ summit_name }} </mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 300;
+        line-height: 1.75rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .email-content {
+        padding: 1.75rem;
+      }
+
+      img.email-header {
+        height: 100%;
+        width: 100%;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+      .email-cta {
+        background-color: #5e5f62;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+      }
+
+      .email-cta p {
+        margin-left: 3%;
+      }
+
+      .email-button {
+        text-align: left;
+        margin: 1rem 0;
+      }
+
+      .btn-primary:hover {
+        background-color: #77787c;
+      }
+
+      .btn-primary {
+        box-sizing: border-box;
+        margin: 0;
+        font: inherit;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        font-family: inherit;
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border-radius: 4px;
+        background-color: #5e5f62;
+        color: #ffffff !important;
+        border: none;
+      }
+
+      small {
+        line-height: 1;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-spacer height="18px" />
+        <mj-text>
+          Thanks {{ owner_full_name }}!
+        </mj-text>
+        <mj-text>
+          You have provided the additional details required to issue your ticket for {{ summit_name }}.
+        </mj-text>
+
+        <mj-text font-weight="700">
+          When the event is live, you will be able to log in to <a href="{{ summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a> with your FNid using {{ owner_email }}.
+        </mj-text>
+
+        <mj-text>
+          You may access your FNid account and update your profile by <a href="{{ summit_marketing_site_url }}">clicking here</a>.
+        </mj-text>
+
+        <mj-text>For reference:<br /></mj-text>
+
+        <mj-text>
+          <ul>
+            <li>Your ticket number: {{ ticket_number }}</li>
+            <li>Type: {{ ticket_type_name }}</li>
+            <li>Attendee: {{ owner_email }}</li>
+          </ul>
+        </mj-text>
+
+        <mj-text>We look forward to seeing you at <a href="{{summit_marketing_site_url}}" target="_blank">{{ summit_name }}</a>. </mj-text>
+        <mj-text>
+          Thank you!<br />
+          {{ summit_name }} Support Team
+        </mj-text>
+
+        <mj-spacer height="18px" />
+
+        <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
+          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
