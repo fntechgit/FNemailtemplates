@@ -1,0 +1,14 @@
+{
+  "name": "fnemailtemplates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-templates": "mjml ./mjml/*.mjml -o"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mjml": "^4.12.0"
+  }
+}

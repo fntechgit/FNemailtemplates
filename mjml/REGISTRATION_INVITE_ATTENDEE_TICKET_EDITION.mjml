@@ -1,0 +1,144 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
+    Version: 2
+    From Email: registration@fntech.com
+    Use Subject: {{summit_name}}: You are registered, but action still needed! 
+    -->
+    <mj-title>Additional Information Required from invitee</mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .email-content {
+        padding: 1.75rem;
+      }
+
+      img.email-header {
+        height: 100%;
+        width: 100%;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+      .email-cta {
+        background-color: #5e5f62;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+      }
+
+      .email-cta p {
+        margin-left: 3%;
+      }
+
+      .email-button {
+        text-align: left;
+        margin: 1rem 0;
+      }
+
+      .btn-primary:hover {
+        background-color: #77787c;
+      }
+
+      .btn-primary {
+        box-sizing: border-box;
+        margin: 0;
+        font: inherit;
+        overflow: visible;
+        text-transform: none;
+        -webkit-appearance: button;
+        font-family: inherit;
+        display: inline-block;
+        padding: 6px 12px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        background-image: none;
+        border-radius: 4px;
+        background-color: #5e5f62;
+        color: #ffffff !important;
+        border: none;
+      }
+
+      small {
+        line-height: 1;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-spacer height="18px" />
+        <mj-text>Hi {{owner_full_name}},</mj-text>
+        <mj-text>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</mj-text>
+        <mj-text font-weight="700">
+          In order to issue your ticket, you must <a class="button-link" target="_blank" href="{{ edit_ticket_link }}">provide or verify additional details</a>.
+        </mj-text>
+        <mj-text>
+          <a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Provide ticket details now</button></a>
+        </mj-text>
+        <mj-text>Your registration information is below:<br /></mj-text>
+        <mj-text>
+          <ul>
+            <li>Ticket number: {{ ticket_number }}</li>
+            <li>Type: {{ ticket_type_name }}</li>
+            <li>Attendee: {{ owner_email }}</li>
+            {% if need_details is defined and need_details is sameas true %}
+            <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
+            {% endif %}
+          </ul>
+        </mj-text>
+
+        <mj-text>Once the required additional details have been completed, you will receive another email with your ticket confirmation.</mj-text>
+        <mj-text>If you do not wish to accept this ticket, please email {{ order_owner_full_name }} at <a href="mailto:{{order_owner_email}}?subject=RE:%20ticket%20to%20{{summit_name}}">{{ order_owner_email }}</a>, so that your ticket may be assigned to another person.</mj-text>
+
+        <mj-spacer height="18px" />
+
+        <mj-text>We look forward to seeing you at {{ summit_name }}. </mj-text>
+        <mj-text>
+          {{ summit_name }} Support Team
+        </mj-text>
+
+        <mj-spacer height="18px" />
+
+        <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
+          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
