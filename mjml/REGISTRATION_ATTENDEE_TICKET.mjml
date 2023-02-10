@@ -116,16 +116,19 @@
         <mj-text>
           You have provided the additional details required to issue your ticket for {{ summit_name }}.
         </mj-text>
-
         <mj-text font-weight="700">
-          When the event is live, you will be able to log in to <a href="{{ summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a> with your FNid using {{ owner_email }}.
+          You may use the QR code below to expedite check-in at the {{ summit_name }} registration counter.
         </mj-text>
+        <mj-image alt="Ticket QR Code" src="cid:qrcid" />
 
         <mj-text>
-          You may access your FNid account and update your profile by <a href="{{ summit_marketing_site_url }}">clicking here</a>.
+          You may access your account and update your profile by <a href="{{ raw_summit_marketing_site_url }}">clicking here</a> and choosing "My Profile" from the top nav bar. You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.
+        </mj-text>
+        <mj-text>
+          You may review your ticket(s) and update any required details in "<a href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page located in the top nav bar.
         </mj-text>
 
-        <mj-text>For reference:<br /></mj-text>
+        <mj-text>For reference:</mj-text>
 
         <mj-text>
           <ul>
@@ -135,16 +138,14 @@
           </ul>
         </mj-text>
 
-        <mj-text>We look forward to seeing you at <a href="{{summit_marketing_site_url}}" target="_blank">{{ summit_name }}</a>. </mj-text>
-        <mj-text>
-          Thank you!<br />
-          {{ summit_name }} Support Team
-        </mj-text>
+        <mj-text>We look forward to seeing you at the <a href="{{ raw_summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a>.</mj-text>
+        <mj-text>Thank you!</mj-text>
+        <mj-text>{{ summit_name }} Support Team</mj-text>
 
         <mj-spacer height="18px" />
 
-        <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
-          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+        <mj-text>
+          PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
         </mj-text>
 
       </mj-column>

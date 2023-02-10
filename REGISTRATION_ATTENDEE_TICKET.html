@@ -82,6 +82,16 @@
 
   </style>
   <style type="text/css">
+    @media only screen and (max-width:480px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
+    }
+
   </style>
   <style type="text/css">
     p {
@@ -213,17 +223,35 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;font-weight:700;line-height:1.6;text-align:left;color:#53585F;">When the event is live, you will be able to log in to <a href="{{ summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a> with your FNid using {{ owner_email }}.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;font-weight:700;line-height:1.6;text-align:left;color:#53585F;">You may use the QR code below to expedite check-in at the {{ summit_name }} registration counter.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:650px;">
+                                <img alt="Ticket QR Code" height="auto" src="cid:qrcid" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="650" />
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">You may access your FNid account and update your profile by <a href="{{ summit_marketing_site_url }}">clicking here</a>.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">You may access your account and update your profile by <a href="{{ raw_summit_marketing_site_url }}">clicking here</a> and choosing "My Profile" from the top nav bar. You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">For reference:<br /></div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">You may review your ticket(s) and update any required details in "<a href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page located in the top nav bar.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">For reference:</div>
                       </td>
                     </tr>
                     <tr>
@@ -239,14 +267,17 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to seeing you at <a href="{{summit_marketing_site_url}}" target="_blank">{{ summit_name }}</a>.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to seeing you at the <a href="{{ raw_summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a>.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Thank you!<br />
-                          {{ summit_name }} Support Team
-                        </div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Thank you!</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">{{ summit_name }} Support Team</div>
                       </td>
                     </tr>
                     <tr>
@@ -256,7 +287,7 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:13px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
                       </td>
                     </tr>
                   </tbody>
