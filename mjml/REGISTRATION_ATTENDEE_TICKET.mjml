@@ -117,11 +117,17 @@
     </mj-section>
     <mj-section css-class="header" full-width="full-width" padding-top="0" padding-bottom="0">
       <mj-column width="100%">
+        <!--
+          Use https://pinetools.com/split-image to slit header image into 2, a top and a bottom one
+        -->
         <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-top.jpg" width="600px" alt="Header top image" padding="0" />
       </mj-column>
     </mj-section>
     <mj-section padding-top="0" padding-bottom="0">
       <mj-column width="100%">
+        <!--
+          Use https://pinetools.com/split-image to slit header image into 2, a top and a bottom one
+        -->
         <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-bottom.jpg" width="600px" alt="Header bottom image" padding="0" />
       </mj-column>
     </mj-section>
