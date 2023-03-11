@@ -2,7 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-  <title> Ticket for {{ summit_name }}
+  <title>
+    {{ summit_name }} ticket
   </title>
   <!--[if !mso]><!-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,45 +42,55 @@
       display: block;
       margin: 13px 0;
     }
-
   </style>
   <!--[if mso]>
-    <noscript>
-    <xml>
-    <o:OfficeDocumentSettings>
-      <o:AllowPNG/>
-      <o:PixelsPerInch>96</o:PixelsPerInch>
-    </o:OfficeDocumentSettings>
-    </xml>
-    </noscript>
-    <![endif]-->
+        <noscript>
+        <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+        </xml>
+        </noscript>
+        <![endif]-->
   <!--[if lte mso 11]>
-    <style type="text/css">
-      .mj-outlook-group-fix { width:100% !important; }
-    </style>
-    <![endif]-->
-  <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" rel="stylesheet" type="text/css">
-  <style type="text/css">
-    @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700);
-
-  </style>
-  <!--<![endif]-->
+        <style type="text/css">
+          .mj-outlook-group-fix { width:100% !important; }
+        </style>
+        <![endif]-->
   <style type="text/css">
     @media only screen and (min-width:480px) {
+      .mj-column-per-70 {
+        width: 70% !important;
+        max-width: 70%;
+      }
+
       .mj-column-per-100 {
         width: 100% !important;
         max-width: 100%;
       }
-    }
 
+      .mj-column-per-50 {
+        width: 50% !important;
+        max-width: 50%;
+      }
+    }
   </style>
   <style media="screen and (min-width:480px)">
+    .moz-text-html .mj-column-per-70 {
+      width: 70% !important;
+      max-width: 70%;
+    }
+
     .moz-text-html .mj-column-per-100 {
       width: 100% !important;
       max-width: 100%;
     }
 
+    .moz-text-html .mj-column-per-50 {
+      width: 50% !important;
+      max-width: 50%;
+    }
   </style>
   <style type="text/css">
     @media only screen and (max-width:480px) {
@@ -91,203 +102,145 @@
         width: auto !important;
       }
     }
-
   </style>
   <style type="text/css">
-    p {
-      font-size: 1rem;
-      font-weight: 400;
+    @media (max-width: 480px) {
+      .font-size-fix>div {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+      }
     }
 
-    h1 {
-      font-size: 1.75rem;
-      font-weight: 300;
-      line-height: 1.75rem;
-      margin-bottom: 1.5rem;
-      margin-top: 1rem;
-    }
+    @media (max-width: 480px) {
+      .column-mobile-gut-fix>table>tbody>tr>td {
+        padding: 0px !important;
+      }
 
-    a {
-      color: #53585F;
+      .column-mobile-gut-fix+.column-mobile-gut-fix {
+        padding-top: 20px;
+      }
     }
-
-    .email-content {
-      padding: 1.75rem;
-    }
-
-    img.email-header {
-      height: 100%;
-      width: 100%;
-    }
-
-    ul {
-      margin: .25rem 0 1rem;
-      padding-left: 2rem;
-    }
-
-    li {
-      line-height: 1.25rem;
-      margin: .25rem;
-    }
-
-    .details_needed {
-      color: red;
-      font-weight: 600;
-    }
-
-    .email-cta {
-      background-color: #5e5f62;
-      width: 75%;
-      max-width: 75%;
-      float: right;
-      margin-bottom: 2rem;
-      clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
-    }
-
-    .email-cta p {
-      margin-left: 3%;
-    }
-
-    .email-button {
-      text-align: left;
-      margin: 1rem 0;
-    }
-
-    .btn-primary:hover {
-      background-color: #77787c;
-    }
-
-    .btn-primary {
-      box-sizing: border-box;
-      margin: 0;
-      font: inherit;
-      overflow: visible;
-      text-transform: none;
-      -webkit-appearance: button;
-      font-family: inherit;
-      display: inline-block;
-      padding: 6px 12px;
-      font-weight: 400;
-      line-height: 1.42857143;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      touch-action: manipulation;
-      cursor: pointer;
-      user-select: none;
-      background-image: none;
-      border-radius: 4px;
-      background-color: #5e5f62;
-      color: #ffffff !important;
-      border: none;
-    }
-
-    small {
-      line-height: 1;
-    }
-
   </style>
   <!-- Template Name: REGISTRATION_ATTENDEE_TICKET
-    Version: 1
+    Version: 2
     From Email: registration@fntech.com
     Use Subject: Your ticket for {{ summit_name }} -->
 </head>
 
-<body style="word-spacing:normal;">
-  <div style="">
-    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:700px;" width="700" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div style="margin:0px auto;max-width:700px;">
-      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
-        <tbody>
-          <tr>
-            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
-              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:700px;" ><![endif]-->
-              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
-                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
-                  <tbody>
-                    <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
-                    <tr>
-                      <td style="font-size:0px;word-break:break-word;">
-                        <div style="height:18px;line-height:18px;">&#8202;</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Thanks {{ owner_full_name }}!</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">You have provided the additional details required to issue your ticket for {{ summit_name }}.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;font-weight:700;line-height:1.6;text-align:left;color:#53585F;">You may use the QR code below to expedite check-in at the {{ summit_name }} registration counter.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+<body style="word-spacing:normal;background-color:#D9D9D9;">
+  <div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;"> Your ticket for {{ summit_name }}
+  </div>
+  <div style="background-color:#D9D9D9;">
+    <table align="center" class="header" border="0" cellpadding="0" cellspacing="0" role="presentation" style="<!--DarkModehacktooverrideemailclientschangingbackgroundcolors-->background: linear-gradient(#000000, #000000); background-color: #000000; width: 100%;" width="100%" bgcolor="#000000">
+      <tbody>
+        <tr>
+          <td>
+            <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="header-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:600px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:420px;" ><![endif]-->
+                      <div class="mj-column-per-70 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                           <tbody>
                             <tr>
-                              <td style="width:650px;">
-                                <img alt="Ticket QR Code" height="auto" src="cid:qrcid" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="650" />
+                              <td align="center" style="font-size:0px;padding:50px;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="width:320px;">
+                                        <img alt="Summit logo" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/fntech-logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="320">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td align="center" class="indent-color font-size-fix" style="color: #FFB01C; font-size: 0px; padding: 0; word-break: break-word;">
+                                <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; letter-spacing: 0.05em; line-height: 24px; text-align: center; text-transform: uppercase; color: #FFB01C;">FILL IN DATE EXCERPT <br> FILL IN VENUE EXCERPT</div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </td>
-                    </tr>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table align="center" class="header" border="0" cellpadding="0" cellspacing="0" role="presentation" style="<!--DarkModehacktooverrideemailclientschangingbackgroundcolors-->background: linear-gradient(#000000, #000000); background-color: #000000; width: 100%;" width="100%" bgcolor="#000000">
+      <tbody>
+        <tr>
+          <td>
+            <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="header-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:600px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0;padding-top:0;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                      <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                          <tbody>
+                            <!-- Use https://pinetools.com/split-image to slit header image into 2, a top and a bottom one -->
+                            <tr>
+                              <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                  <tbody>
+                                    <tr>
+                                      <td style="width:600px;">
+                                        <img alt="Header top image" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-top.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div style="margin:0px auto;max-width:600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0;padding-top:0;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+              <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                  <tbody>
+                    <!-- Use https://pinetools.com/split-image to slit header image into 2, a top and a bottom one -->
                     <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">You may access your account and update your profile by <a href="{{ raw_summit_marketing_site_url }}">clicking here</a> and choosing "My Profile" from the top nav bar. You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">You may review your ticket(s) and update any required details in "<a href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page located in the top nav bar.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">For reference:</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">
-                          <ul>
-                            <li>Your ticket number: {{ ticket_number }}</li>
-                            <li>Type: {{ ticket_type_name }}</li>
-                            <li>Attendee: {{ owner_email }}</li>
-                          </ul>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to seeing you at the <a href="{{ raw_summit_marketing_site_url }}" target="_blank">{{ summit_name }}</a>.</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Thank you!</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">{{ summit_name }} Support Team</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-size:0px;word-break:break-word;">
-                        <div style="height:18px;line-height:18px;">&#8202;</div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
+                      <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                          <tbody>
+                            <tr>
+                              <td style="width:600px;">
+                                <img alt="Header bottom image" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-bottom.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </td>
                     </tr>
                   </tbody>
@@ -299,7 +252,401 @@
         </tbody>
       </table>
     </div>
+    <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-section-outlook" style="width:600px;" width="600" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+    <div class="body-section" style="-webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); background: #FFFFFF; background-color: #FFFFFF; margin: 0px auto; max-width: 600px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
+        <tbody>
+          <tr>
+            <td style="direction:ltr;font-size:0px;padding:0 30px;text-align:center;">
+              <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:540px;" width="540" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:540px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:10px 25px;padding-right:0;padding-left:0;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:24px;text-align:left;color:#161616;">Thanks {{ owner_full_name }}</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:10px 25px;padding-right:0;padding-left:0;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">You have provided the additional details required to issue your ticket for <span class="contrast-color" style="color: #FD091B;">{{ summit_name }}</span>.</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="section-border-outlook" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="section-border-outlook" style="width:540px;" width="540" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div class="section-border" style="margin:0px auto;max-width:540px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; width: 100%;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td style="border-radius: 10px; border: 1px solid black; direction: ltr; font-size: 0px; padding: 20px 0; text-align: center;" align="center">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:538px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="center" class="indent-color" style="color: #FFB01C; font-size: 0px; padding: 10px 25px; padding-bottom: 0; word-break: break-word;">
+                                  <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 24px; text-align: center; text-transform: uppercase; color: #FFB01C;">Your Ticket Information</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:10px 25px;padding-bottom:0;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">You may use the QR code below to expedite check-in at the {{ summit_name }} registration counter.</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:0;word-break:break-word;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
+                                    <tbody>
+                                      <tr>
+                                        <td style="width:300px;">
+                                          <img alt="Ticket QR Code" height="auto" src="cid:qrcid" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="300">
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:13px;font-weight:400;line-height:24px;text-align:center;text-transform:uppercase;color:#161616;">{{ ticket_number }}</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td><td class="ticket-information-outlook" style="vertical-align:top;width:538px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix ticket-information" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" class="ticket" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">
+                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-ticket.png') padding-box no-repeat; background-size: 14.88px;">
+                                      <li>Ticket Type: <span class="light-gray" style="color: #888888;">{{ ticket_type_name }}</span></li>
+                                      <li>Attendee: <span class="light-gray" style="color: #888888;">{{ owner_email }}</span></li>
+                                      <li>Promo Code: <span class="light-gray" style="color: #888888;">{{ promo_code }}</span></li>
+                                      <li>Price: <span class="light-gray" style="color: #888888;">{{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</span></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="date" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">
+                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-date.png') no-repeat; background-size: 17.14px;">
+                                      <li>Date: <span class="light-gray" style="color: #888888;">FILL IN SUMMIT DATE</span></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="address" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">
+                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-address.png') no-repeat; background-size: 20px;">
+                                      <li>Address: <span class="light-gray" style="color: #888888;">FILL IN VENUE ADDRESS</span></li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:540px;" width="540" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:540px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="column-border-outlook column-mobile-gut-fix-outlook" style="vertical-align:top;width:270px;" ><![endif]-->
+                        <div class="mj-column-per-50 mj-outlook-group-fix column-border column-mobile-gut-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="vertical-align:top;padding-right:10px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; border: 1px solid black; border-radius: 10px;" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:10px 25px;padding-top:24px;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; border-spacing: 0px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width:78px;">
+                                                  <a href="{{raw_summit_marketing_site_url}}/a/my-profile" target="_blank">
+                                                    <img alt="Link to My Profile" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-profile.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="78">
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                          <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:24px;text-align:center;color:#161616;"><a class="dark-gray no-text-decoration" href="{{ raw_summit_marketing_site_url }}/a/my-profile" style="color: #161616; text-decoration: none;">My Profile</a></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:0 30px 20px 30px;word-break:break-word;">
+                                          <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:15px;font-weight:400;line-height:24px;text-align:center;color:#161616;"><a class="dark-gray no-text-decoration" href="{{ raw_summit_marketing_site_url }}/a/my-profile" style="color: #161616; text-decoration: none;">Access your account and update your profile <span class="contrast-color" style="color: #FD091B; text-decoration: underline;">here</span></a></div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td><td class="column-border-outlook column-mobile-gut-fix-outlook" style="vertical-align:top;width:270px;" ><![endif]-->
+                        <div class="mj-column-per-50 mj-outlook-group-fix column-border column-mobile-gut-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                            <tbody>
+                              <tr>
+                                <td style="vertical-align:top;padding-left:10px;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; border: 1px solid black; border-radius: 10px;" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:10px 25px;padding-top:24px;word-break:break-word;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: collapse; border-spacing: 0px;">
+                                            <tbody>
+                                              <tr>
+                                                <td style="width:78px;">
+                                                  <a href="{{ raw_summit_marketing_site_url }}/a/my-tickets" target="_blank">
+                                                    <img alt="Link to My Orders/Tickets dashboard" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-orders.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="78">
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                          <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:24px;text-align:center;color:#161616;"><a class="dark-gray no-text-decoration" href="{{ edit_ticket_link }}/a/my-tickets" style="color: #161616; text-decoration: none;">My Orders/Tickets</a></div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" style="font-size:0px;padding:0 30px 20px 30px;word-break:break-word;">
+                                          <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:15px;font-weight:400;line-height:24px;text-align:center;color:#161616;"><a class="dark-gray no-text-decoration" href="{{ raw_summit_marketing_site_url }}/a/my-tickets" style="color: #161616; text-decoration: none;">Review or update your ticket(s) details <span class="indent-color" style="color: #FFB01C; text-decoration: underline;">here</span></a></div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr><![endif]-->
+              <!-- <mj-section padding="0">
+        <mj-column width="100%" padding="0">
+          <mj-image src="https://object-storage.public.mtl1.vexxhost.net/swift/v1/6e4619c416ff4bd19e1c087f27a43eea/assets-oif/emails/summit-keynote.png" alt="Previous Summit Keynote photo" padding="0" />
+        </mj-column>
+      </mj-section> -->
+              <!--[if mso | IE]><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:540px;" width="540" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+              <div style="margin:0px auto;max-width:540px;">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                  <tbody>
+                    <tr>
+                      <td style="direction:ltr;font-size:0px;padding:20px 0;padding-top:0;text-align:center;">
+                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:540px;" ><![endif]-->
+                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                            <tbody>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:10px 25px;padding-right:0;padding-left:0;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">We're looking forward meeting you at {{ summit_name }}.</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" style="font-size:0px;padding:0;word-break:break-word;">
+                                  <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:24px;text-align:left;color:#161616;">Thank you!</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="left" class="contrast-color" style="color: #FD091B; font-size: 0px; padding: 10px 25px; padding-top: 0; padding-right: 0; padding-left: 0; word-break: break-word;">
+                                  <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 24px; text-align: left; color: #FD091B;">{{ summit_name }} Support Team</div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--[if mso | IE]></td></tr></table><![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <!--[if mso | IE]></td></tr></table><![endif]-->
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+      <tbody>
+        <tr>
+          <td>
+            <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+            <div style="margin:0px auto;max-width:600px;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                <tbody>
+                  <tr>
+                    <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;">
+                      <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                      <div style="margin:0px auto;max-width:600px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                          <tbody>
+                            <tr>
+                              <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:10px;padding-top:10px;text-align:center;">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
+                                <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                  <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                    <tbody>
+                                      <tr>
+                                        <td style="vertical-align:top;padding:0;">
+                                          <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                                            <tbody>
+                                              <tr>
+                                                <td align="center" style="font-size:0px;padding:0;word-break:break-word;">
+                                                  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td><![endif]-->
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                                    <tr>
+                                                      <td style="padding:8px;vertical-align:middle;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:transparent;border-radius:3px;width:26px;">
+                                                          <tr>
+                                                            <td style="font-size:0;height:26px;vertical-align:middle;width:26px;">
+                                                              <a href="https://twitter.com/" target="_blank">
+                                                                <img height="26" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-twitter.png" style="border-radius:3px;display:block;" width="26">
+                                                              </a>
+                                                            </td>
+                                                          </tr>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                                  <!--[if mso | IE]></td><td><![endif]-->
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                                    <tr>
+                                                      <td style="padding:8px;vertical-align:middle;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:transparent;border-radius:3px;width:26px;">
+                                                          <tr>
+                                                            <td style="font-size:0;height:26px;vertical-align:middle;width:26px;">
+                                                              <a href="https://www.linkedin.com/" target="_blank">
+                                                                <img height="26" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-linkedin.png" style="border-radius:3px;display:block;" width="26">
+                                                              </a>
+                                                            </td>
+                                                          </tr>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                                  <!--[if mso | IE]></td><td><![endif]-->
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
+                                                    <tr>
+                                                      <td style="padding:8px;vertical-align:middle;">
+                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:transparent;border-radius:3px;width:26px;">
+                                                          <tr>
+                                                            <td style="font-size:0;height:26px;vertical-align:middle;width:26px;">
+                                                              <a href="https://www.facebook.com/" target="_blank">
+                                                                <img height="26" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-facebook.png" style="border-radius:3px;display:block;" width="26">
+                                                              </a>
+                                                            </td>
+                                                          </tr>
+                                                        </table>
+                                                      </td>
+                                                    </tr>
+                                                  </table>
+                                                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table></td></tr><tr><td class="" width="600px" ><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+                      <div style="margin:0px auto;max-width:600px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                          <tbody>
+                            <tr>
+                              <td style="direction:ltr;font-size:0px;padding:20px 0;padding-top:0;text-align:center;">
+                                <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="width:600px;" ><![endif]-->
+                                <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0;line-height:0;text-align:left;display:inline-block;width:100%;direction:ltr;">
+                                  <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" role="presentation" ><tr><td style="vertical-align:top;width:600px;" ><![endif]-->
+                                  <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                                      <tbody>
+                                        <tr>
+                                          <td style="vertical-align:top;padding-right:0;">
+                                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
+                                              <tbody>
+                                                <tr>
+                                                  <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                                    <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:18px;text-align:center;color:#161616;">Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a class="dark-gray no-text-decoration" style="color: #161616; text-decoration: none; font-weight: bold;" href="mailto:{{ support_email }}">{{ support_email }}</a></div>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                                </div>
+                                <!--[if mso | IE]></td></tr></table><![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!--[if mso | IE]></td></tr></table><![endif]-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 
