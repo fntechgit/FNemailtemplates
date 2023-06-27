@@ -1,0 +1,132 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
+    Version: 2
+    From Email: registration@fntech.com
+    Use Subject: {{summit_name}}: You are registered, but action still needed! 
+    -->
+    <mj-title>You’re Invited to RDC &mp; Roblox Innovation Awards 2023</mj-title>
+    <mj-font name="Arial, Helvetica, sans-serif" />
+    <mj-attributes>
+   <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Arial, Helvetica, sans-serif"/>
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .email-content {
+        padding: 1.75rem;
+      }
+
+      img.email-header {
+        height: 100%;
+        width: 100%;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+      .email-cta {
+        background-color: #5e5f62;
+        width: 75%;
+        max-width: 75%;
+        float: right;
+        margin-bottom: 2rem;
+        clip-path: polygon(3% 0%, 100% 0, 100% 100%, 0% 100%)
+      }
+
+      .email-cta p {
+        margin-left: 3%;
+      }
+
+      .email-button {
+        text-align: left;
+        margin: 1rem 0;
+      }
+
+   .btn-primary:hover {
+        background-color: #77787c;
+      }
+
+   .btn-primary {
+      box-sizing: border-box;
+      margin: 0;
+      font: inherit;
+      overflow: visible;
+      text-transform: none;
+      -webkit-appearance: button;
+      font-family: inherit;
+      display: inline-block;
+      padding: 6px 12px;
+      font-weight: 400;
+      line-height: 1.42857143;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      touch-action: manipulation;
+      cursor: pointer;
+      user-select: none;
+      background-image: none;
+      border-radius: 50px;
+      background-color: #0391F4;
+      color: #ffffff !important;
+      border: none;
+      font-size: 24px;
+      }
+
+      small {
+        line-height: 1;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+        <mj-image alt="{{ summit_name }}" src="https://spaces.fnvirtual.app/RDC23/Emails/Register%20Now.png" />
+        <mj-spacer height="18px" />
+        <mj-text>Dear {{ first_name }},</mj-text>
+        <mj-text>
+        We are happy to announce that registration is now open for the <strong>Roblox Developers Conference</strong> (RDC) <strong>September 8-9 at Fort Mason Center in San Francisco</strong>! This year’s event is shaping up to be the best yet with global developers, partners, and influencers joining us and the second annual in-person Roblox Innovation Awards (Saturday, September 9 at 6pm).
+        </mj-text>
+        <mj-text>
+        You can reserve your ticket by clicking “Register Now” below. Please note you must use this email address to register.
+        </mj-text>
+        <mj-text>
+          <center> <a class="btn-primary" target="_blank" href="{{summit_marketing_site_url}}"><button class="btn btn-primary manage-btn">Register Now</button></a></center>
+        </mj-text>
+        <mj-text>
+          
+            Event Dates: September 8-9, 2023<br/>
+            Location: Fort Mason Center, San Francisco CA
+        </mj-text>
+
+ 
+        <mj-text>Questions? Please email <a href="mailto:{{ support_email }}">{{ support_email }}</a>. To learn more about RDC, please visit <a href="{{ raw_summit_marketing_site_url }}" target="_blank">{{ raw_summit_marketing_site_url }}</a>.</mj-text>
+
+        <mj-text>
+          Thank you,<br/> RDC Team
+        </mj-text>
+
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
