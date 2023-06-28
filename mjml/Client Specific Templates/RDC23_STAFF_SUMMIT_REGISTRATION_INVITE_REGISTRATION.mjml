@@ -1,11 +1,5 @@
 <mjml>
   <mj-head>
-    <!--
-    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
-    Version: 2
-    From Email: registration@fntech.com
-    Use Subject: {{summit_name}}: You are registered, but action still needed! 
-    -->
     <mj-title>Staff Invite: {{summit_name}}</mj-title>
     <mj-font name="Arial, Helvetica, sans-serif" />
     <mj-attributes>
@@ -103,7 +97,9 @@
         <mj-image alt="{{ summit_name }}" src="https://spaces.fnvirtual.app/RDC23/Emails/Register%20Now.png" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{ first_name }},</mj-text>
-        <mj-text>We’re excited to have you join us at Roblox Developers Conference (RDC), which will take place at the Fort Mason Center in San Francisco, CA on <strong>September 8-9, 2023</strong>.</mj-text>
+        <mj-text>
+        We’re excited to have you join us at Roblox Developers Conference (RDC) at the Fort Mason Center in San Francisco, CA on <strong>September 8-9, 2023</strong>.
+        </mj-text>
         <mj-text>
           Please reserve your ticket by clicking “Register Now.” 
         </mj-text>
@@ -121,7 +117,7 @@ Location: Fort Mason Center, San Francisco CA
         <mj-text>Questions? Please email <a href="mailto:{{ support_email }}">{{ support_email }}</a>. To learn more about RDC, you can visit our website <a href="{{ raw_summit_marketing_site_url }}" target="_blank">here</a>.</mj-text>
 
 
-        <mj-text>This year’s conference is sure to be our biggest yet, and we know our attendees will benefit immensely from hearing your insights and perspectives. We look forward to seeing you there! </mj-text>
+        <mj-text>This year’s conference is sure to be our biggest yet, and we appreciate the work you’re doing to help make the event a success. We look forward to seeing you there!</mj-text>
         <mj-text>
           Thank you,<br/> RDC Team
         </mj-text>

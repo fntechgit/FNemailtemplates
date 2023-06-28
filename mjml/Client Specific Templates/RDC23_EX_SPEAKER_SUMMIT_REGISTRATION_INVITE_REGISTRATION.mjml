@@ -1,11 +1,5 @@
 <mjml>
   <mj-head>
-    <!--
-    Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
-    Version: 2
-    From Email: registration@fntech.com
-    Use Subject: {{summit_name}}: You are registered, but action still needed! 
-    -->
     <mj-title>Internal Speaker Invite: {{summit_name}}</mj-title>
     <mj-font name="Arial, Helvetica, sans-serif" />
     <mj-attributes>
@@ -103,7 +97,7 @@
         <mj-image alt="{{ summit_name }}" src="https://spaces.fnvirtual.app/RDC23/Emails/Register%20Now.png" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{ first_name }},</mj-text>
-        <mj-text>We are excited to have you speak at the Roblox Developers Conference (RDC), which will take place at the Fort Mason Center in San Francisco, CA on <strong>September 8-9, 2023</strong>.</mj-text>
+        <mj-text>We are excited to have you speak at the Roblox Developers Conference (RDC) at the Fort Mason Center in San Francisco, CA on <strong>September 8-9, 2023</strong>.</mj-text>
         <mj-text>
           As a speaker, your ticket is complimentary. You can reserve your ticket by clicking “Register” below. Please note you must use this email address to register.
         </mj-text>
@@ -117,11 +111,11 @@
             Location: Fort Mason Center, San Francisco CA
         </mj-text>
 
-        <mj-text>Please register online to confirm your attendance and let us know if you require travel arrangements. 
-                                    One of our speaker managers will reach out to you to book your travel.
+        <mj-text>Your ticket includes travel and hotel accommodations for up to four nights (room and tax) from September 6-10. Please register online to confirm your attendance and let us know if you require travel arrangements. One of our speaker managers will reach out to you to book your travel.
+
                               <br/><br/>
                                   <ul>
-                                    <li>Flight: As a Roblox employee, you may book your flight on Navan (aka TripActions).</li>
+                                    <li>Flight: Upon completing registration, you will receive a link via email to book your flight on Navan (aka TripActions). </li>
                                     <li>Hotel: You will be booked in one of our hotel blocks and receive your hotel confirmation at a later date.</li>
                                   </ul></mj-text>
         <mj-text>Questions? Please email <a href="mailto:{{ support_email }}">{{ support_email }}</a>. To learn more about RDC, you can visit our website <a href="{{ raw_summit_marketing_site_url }}" target="_blank">here</a>.</mj-text>

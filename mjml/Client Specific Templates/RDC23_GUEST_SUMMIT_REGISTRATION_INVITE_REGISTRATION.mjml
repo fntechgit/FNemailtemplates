@@ -104,7 +104,7 @@
         <mj-spacer height="18px" />
         <mj-text>Dear {{ first_name }},</mj-text>
         <mj-text>
-        We are happy to announce that registration is now open for the <strong>Roblox Developers Conference</strong> (RDC) <strong>September 8-9 at Fort Mason Center in San Francisco</strong>! This year’s event is shaping up to be the best yet with global developers, partners, and influencers joining us and the second annual in-person Roblox Innovation Awards (Saturday, September 9 at 6pm).
+        We're excited to announce that registration is now open for the <strong>Roblox Developers Conference (RDC) on September 8-9 at Fort Mason Center in San Francisco</strong>. This year’s event is shaping up to be our best yet with developers, partners, and influencers joining us from around the globe, along with the second annual Roblox Innovation Awards (live and in person on Saturday, September 9 at 6pm).
         </mj-text>
         <mj-text>
         You can reserve your ticket by clicking “Register Now” below. Please note you must use this email address to register.
