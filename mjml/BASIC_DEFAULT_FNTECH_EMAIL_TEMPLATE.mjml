@@ -12,18 +12,8 @@
       <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
     </mj-attributes>
     <mj-style>
-      .details-needed {
-        color: red;
-        font-weight: 600;
-      }
-
       .email-link {
         color: #53585F;
-      }
-
-      li {
-        line-height: 1.25rem;
-        margin: .25rem;
       }
 
       button {
@@ -31,11 +21,36 @@
         font-size: 16px;
         padding: 6px 12px;
       }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
     </mj-style>
   </mj-head>
   <mj-body width="700px">
     <mj-section>
       <mj-column>
+      <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
         <mj-spacer height="18px" />
         <mj-text>
           Hi,

@@ -72,64 +72,54 @@
         <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
         <mj-spacer height="18px" />
         <mj-text>Hi {{ owner_full_name }},</mj-text>
-        <mj-text>Your ticket(s) for {{ summit_name }} *HAVE NOT* been accepted.</mj-text>
-        <mj-text>
-          <ul>
-            <li>If you have not assigned your ticket(s), please go to the "<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>" page to assign your ticket(s) by {{ summit_reassign_ticket_till_date }}.</li>
-            <li>If you have assigned your ticket(s), please ask the ticket holder to complete the additional details required by {{ summit_reassign_ticket_till_date }}. If you prefer to complete the required details yourself, you may do so on the “<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>” page.</li>
-            <li>You must assign the ticket before the attendee details can be entered by you, the purchaser, or the ticket holder.</li>
-          </ul>
-        </mj-text>
-        <mj-text>
-          <strong>
-            Once all required details are entered, the ticket will be issued and emailed to the assigned ticket holder.</strong>
-          Tickets will not be issued if unassigned or incomplete.
-        </mj-text>
-        <mj-text>
-          <a target="_blank" href="{{ manage_orders_url }}"><button class="btn btn-primary manage-btn">Manage "My Orders"</button></a>
-        </mj-text>
-        <mj-text>
-          <ul>
-            {% for ticket in tickets %}
-            <li>
-              <b>{{ ticket.number }}</b>
-              <ul>
-                <li>Type: {{ ticket.ticket_type_name }}</li>
-                <li>
-                  {% if ticket.has_owner is defined and ticket.has_owner is sameas true %}
-                  Attendee: {{ ticket.owner_email }}
-                  {% else %}
-                  <span class="details_needed">Attendee: UNASSIGNED</span>
-                  {% endif %}
-                </li>
-                <li>
-                  Promo Code:
-                  {% if ticket.promo_code is defined %}
-                  ({{ ticket.promo_code.code }})
-                  {% else %}
-                  None
-                  {% endif %}
-                </li>
-                <li>Price: {{ ticket.currency_symbol }}{{ ticket.price}} {{ ticket.currency }}</li>
-                {% if ticket.need_details is defined and ticket.need_details is sameas true %}
-                <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
-                {% endif %}
-              </ul>
-            </li>
-            {% endfor %}
-          </ul>
-        </mj-text>
-        <mj-text>We look forward to {{ summit_name }}.</mj-text>
-        <mj-text>
-          Thank you!<br />
-          {{ summit_name }} Support Team
-        </mj-text>
-
+            <mj-text>Reminder! Your ticket(s) for {{ summit_name }} *HAVE NOT* been accepted.</mj-text>
+            <mj-text>
+            <ul>
+                <li>If you have not assigned your ticket(s), please go to the "<a target="_blank" href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page located in the top nav bar to assign your ticket(s) by {{ summit_reassign_ticket_till_date }}.</li>
+                <li>If you have assigned your ticket(s), please ask the ticket holder to complete the additional details required by {{ summit_reassign_ticket_till_date }}. If you prefer to complete the required details yourself, you may do so on the “<a target="_blank" href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>” page located in the top nav bar.</li>
+                <li>You must assign the ticket before the attendee details can be entered by you, the purchaser, or the ticket holder.</li>
+            </ul>
+            </mj-text>
+           <mj-text>The "<a target="_blank" href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page is located in the top nav bar of the {{ summit_name }} website. You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.</mj-text>  
+          <mj-text><strong>Once all required details are entered, the ticket will be issued and emailed to the assigned ticket holder.</strong> Tickets will not be issued if unassigned or incomplete.</mj-text>
+            <mj-text><a target="_blank" href="{{ raw_summit_marketing_site_url }}"><button class="btn btn-primary manage-btn">Manage "My Orders/Tickets"</button></a></mj-text>
+            <mj-text>
+            <ul>
+                {% for ticket in tickets %}
+                    <li>
+                        <b>{{ ticket.number }}</b>
+                        <ul>
+                            <li>Type: {{ ticket.ticket_type_name }}</li>
+                            <li>
+                                {% if ticket.has_owner is defined and ticket.has_owner is sameas true %}
+                                    Attendee: {{ ticket.owner_email }}
+                                {% else %}
+                                    <span class="details_needed">Attendee: UNASSIGNED</span>
+                                {% endif %}
+                            </li>
+                            <li>
+                                Promo Code:
+                                {% if ticket.promo_code is defined %}
+                                    ({{ ticket.promo_code.code }})
+                                {% else %}
+                                    None
+                                {% endif %}
+                            </li>
+                            <li>Price: {{ ticket.currency_symbol }}{{ ticket.price}} {{ ticket.currency }}</li>
+                            {% if ticket.need_details is defined and ticket.need_details is sameas true %}
+                                <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            </mj-text>
+            <mj-text>We look forward to issuing your ticket and seeing you at {{ summit_name }}.</mj-text>
+            <mj-text>Thank you! <br>
+            {{ summit_name }} Support Team
+            </mj-text>
         <mj-spacer height="18px" />
-
-        <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
-          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
-        </mj-text>
+            <mj-text font-size="13px">PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</mj-text>
 
       </mj-column>
     </mj-section>
