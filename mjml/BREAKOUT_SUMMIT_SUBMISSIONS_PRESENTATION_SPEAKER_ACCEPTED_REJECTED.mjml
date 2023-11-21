@@ -1,0 +1,195 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: EMAIL_TEMPLATE_NAME_HERE
+    Version: 
+    From Email: registration@fntech.com
+    Use Subject: {{summit_name}}: DESIRED SUBJECT LINE HERE
+    -->
+    <mj-title>Session Acceptance Status | {{summit_name}} </mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      .email-link {
+        color: #53585F;
+      }
+
+      button {
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+      <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-spacer height="18px" />
+        <mj-text>Hi {{speaker_full_name}},</mj-text>
+        <mj-text>Thank you for your Abstract Submission for the <a href="{{summit_site_url}}">{{summit_name}}</a>. I’m pleased to share that at least one of your session(s) has been “conditionally accepted” (see definition below).</mj-text>
+        <br>
+          {% if accepted_presentations is defined and accepted_presentations|length > 0 %}
+        <mj-text><strong>Session(s) accepted for the {{summit_name}}:</strong><br/>
+        <ul>
+        {% for presentation in accepted_presentations %}
+          <li>
+            <mj-text>
+              {{presentation.id}} - {{presentation.title}} - {{presentation.track.name}}
+            </mj-text>
+            <mj-text>
+              Speakers:
+              <ul>
+                {% for speaker in presentation.speakers %}
+                <li>
+                    <mj-text>
+                        {{speaker.full_name}} ({{speaker.email}})
+                    </mj-text>
+                </li>  
+                {% endfor %}
+                {% if presentation.moderator is defined %}
+                <li>
+                  <mj-text>
+                    Moderator {{presentation.moderator.full_name}} ({{presentation.moderator.email}})
+                  </mj-text>
+                </li>
+               {% endif %}
+              </ul>
+            </mj-text>
+          </li>
+        {% endfor %}
+        {% endif %}
+        </ul></mj-text>
+          {% if alternate_presentations is defined and alternate_presentations|length > 0 %}
+        <mj-text><strong>Session(s) accepted as alternate for the {{summit_name}}:</strong><br/>
+        <ul>
+        {% for presentation in alternate_presentations %}
+          <li>
+            <mj-text>
+              {{presentation.id}} - {{presentation.title}} - {{presentation.track.name}}
+            </mj-text>
+            <mj-text>
+              Speakers:
+              <ul>
+                {% for speaker in presentation.speakers %}
+                <li>
+                    <mj-text>
+                        {{speaker.full_name}} ({{speaker.email}})
+                    </mj-text>
+                </li>  
+                {% endfor %}
+                {% if presentation.moderator is defined %}
+                <li>
+                  <mj-text>
+                    Moderator {{presentation.moderator.full_name}} ({{presentation.moderator.email}})
+                  </mj-text>
+                </li>
+               {% endif %}
+              </ul>
+            </mj-text>
+          </li>
+        {% endfor %}
+        {% endif %}
+        </ul></mj-text>
+        {% if rejected_presentations is defined and rejected_presentations|length > 0 %}
+        <mj-text><strong>We regret to inform you that the following session(s) could not be included in our Agenda at this time:</strong><br/>
+        <ul>
+        {% for presentation in rejected_presentations %}
+          <li>
+            <mj-text>
+              {{presentation.id}} - {{presentation.title}} - {{presentation.track.name}}
+            </mj-text>
+            <mj-text>
+              Speakers:
+              <ul>
+                {% for speaker in presentation.speakers %}
+                <li>
+                    <mj-text>
+                        {{speaker.full_name}} ({{speaker.email}})
+                    </mj-text>
+                </li>  
+                {% endfor %}
+                {% if presentation.moderator is defined %}
+                <li>
+                  <mj-text>
+                    Moderator {{presentation.moderator.full_name}} ({{presentation.moderator.email}})
+                  </mj-text>
+                </li>
+               {% endif %}
+              </ul>
+            </mj-text>
+          </li>
+        {% endfor %}
+        {% endif %}
+        </ul></mj-text>
+        <mj-text>We are working with the respective Track Chairs to incorporate your presentation into  the current schedule which will go live soon. In the interest of time, your submission may be combined with another to allow similar topics to be presented together. We will notify you of any such changes or combinations and give you ample time to work with other community members on your presentation.<br/>
+        <mj-text>PLEASE NOTE the following:<br/>
+        <ul>
+        <li>All “conditionally accepted” Abstract Submissions are <strong>pending review and approval of the Draft Slides Presentation</strong> by the Track Chairs. {{summit_name}} reserves the right to reject any session at any time.</li>
+        <li>The Summit Schedule will be posted live on <strong>Monday, July 24</strong> for you to see the exact date and duration of your session. You can now access the <a href="">FNspeaker Portal</a> for the slide template and submit your slides. All presentations (draft and final) must be submitted using the provided OCP slide template.
+          <em>DISCLAIMER: The Summit Schedule is subject to change, pending speaker availability and draft presentation reviews.</em></li>
+        <li>The deadlines below are mandatory. Any speaker or session that does not meet the deadlines or content approval by {{summit_name}} can be removed from the {{summit_name}} schedule at any time. </li>
+        <li>Directions for submitting Draft and Final Presentations can be found <a href="">here.</a></li>
+        <li>Registration codes for speakers will be provided after the Draft Presentation submissions are reviewed.</li>
+        </ul>
+        </mj-text>
+        <table border="1">
+
+          <tr>
+            <td>July 24</td>
+            <td>Summit Schedule posted</td>
+          </tr>
+          <tr>
+            <td>July 17 - August 25</td>
+            <td>Speakers' Draft Presentations Submitted in the <a href="">FNspeaker Portal</a></td>
+          </tr>
+          <tr>
+            <td>August 25 - Sept 11</td>
+            <td>Presentation Review Period</td>
+          </tr>
+          <tr>
+            <td>September 29</td>
+            <td>Speakers' Final Presentations Due in the <a href="">FNspeaker Portal</a></td>
+          </tr>
+          <tr>
+            <td>October 17-19</td>
+            <td>{{summit_name}} Event Days</td>
+          </tr>
+        </table>
+        <br>
+        <mj-text>I will be your Speaker Manager and will work with you directly to collect any additional information needed for the event as well as answer any questions you may have. Thank you and we look forward to working with you. <br/>
+        <br>
+        <dt>Kate Hendle</dt>
+        <dt>Meeting Planner</dt>
+        <dt>Open Compute Project</dt>        
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
