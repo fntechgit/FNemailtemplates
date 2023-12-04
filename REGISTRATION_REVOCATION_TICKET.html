@@ -170,10 +170,14 @@
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Your registration for {{ summit_name }} has been cancelled or reassigned. You are no longer registered to attend this event.</div>
                       </td>
-                    </tr>
+                    </tr>                    
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Should you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">
+                          {% if order_owner_email is defined and order_owner_email != owner_email %}
+                            Should you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information.
+                          {% endif %}
+                        </div>
                       </td>
                     </tr>
                     <tr>
