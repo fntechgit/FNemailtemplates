@@ -73,11 +73,11 @@
         <mj-spacer height="18px" />
         <mj-text>
           Hi {{ owner_full_name }},<br />
-          Your refund request for <strong>{{ summit_name }</strong> has been accepted.
+          Your refund request for <strong>{{ summit_name }}</strong> has been accepted.
         </mj-text>
         <mj-text>A refund has been issued for the following ticket:</mj-text>
         <mj-text>
-            <strong>{{ ticket_number }</strong><br />
+            <strong>{{ ticket_number }}</strong><br />
             <ul>
             <li>Type: {{ ticket_type_name }}</li>
             <li>

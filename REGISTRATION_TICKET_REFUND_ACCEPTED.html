@@ -163,7 +163,7 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Hi {{ owner_full_name }},<br /> Your refund request for <strong>{{ summit_name }</strong> has been accepted.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Hi {{ owner_full_name }},<br /> Your refund request for <strong>{{ summit_name }}</strong> has been accepted.</div>
     
                 </td>
               </tr>
@@ -187,7 +187,7 @@
                   
       <div
          style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"
-      ><strong>{{ ticket_number }</strong><br />
+      ><strong>{{ ticket_number }}</strong><br />
             <ul>
             <li>Type: {{ ticket_type_name }}</li>
                             <li> {% if ticket_owner is defined and ticket_owner|length %} ({{ ticket_owner }}) {% else %} <span class="details_needed">Attendee: UNASSIGNED</span> {% endif %} </li>
