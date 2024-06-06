@@ -3,7 +3,7 @@
     <!--
     Template Name: REGISTRATION_TICKET_REMINDER_EMAIL
     Version: 1
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: Attention! You need to accept your ticket to {{summit_name}} by entering the required details
     -->
     <mj-title>Reminder to accept ticket to event by entering required details</mj-title>
@@ -69,13 +69,12 @@
   <mj-body width="700px">
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
         <mj-spacer height="18px" />
 
         <mj-text>
           Hi {{ owner_full_name }},<br />
-          You have been invited to {{ summit_name }} but your ticket
-          <strong>*HAS NOT*</strong> been issued yet.
+          Reminder! You have a ticket to attend {{ summit_name }} that <strong>*HAS NOT*</strong> been issued yet.
         </mj-text>
 
         <mj-text>In order to issue your ticket, <a href="{{ edit_ticket_link }}" target="_blank">click here to provide or verify additional details</a>.</mj-text>

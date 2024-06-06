@@ -108,7 +108,7 @@
   <mj-body width="700px">
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" />
         <mj-spacer height="18px" />
         <mj-text>
           Thanks {{ owner_full_name }}!

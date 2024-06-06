@@ -3,7 +3,7 @@
     <!--
     Template Name: REGISTRATION_INVITE_ATTENDEE_TICKET_EDITION
     Version: 2
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: {{summit_name}}: You are registered, but action still needed! 
     -->
     <mj-title>Additional Information Required from invitee</mj-title>
@@ -100,7 +100,7 @@
   <mj-body width="700px">
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-image alt="{{ summit_name }}" src="{{EMAIL_TEMPLATE_GENERIC_BANNER}}" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{owner_full_name}},</mj-text>
         <mj-text>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</mj-text>

@@ -168,15 +168,15 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Your ticket(s) for {{ summit_name }} *HAVE NOT* been accepted.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Reminder! Your ticket(s) for {{ summit_name }} *HAVE NOT* been accepted.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                         <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">
                           <ul>
-                            <li>If you have not assigned your ticket(s), please go to the "<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>" page to assign your ticket(s) by {{ summit_reassign_ticket_till_date }}.</li>
-                            <li>If you have assigned your ticket(s), please ask the ticket holder to complete the additional details required by {{ summit_reassign_ticket_till_date }}. If you prefer to complete the required details yourself, you may do so on the “<a target="_blank" href="{{ manage_orders_url }}">My Orders</a>” page.</li>
+                            <li>If you have not assigned your ticket(s), please go to the "<a target="_blank" href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page located in the top nav bar to assign your ticket(s) by {{ summit_reassign_ticket_till_date }}.</li>
+                            <li>If you have assigned your ticket(s), please ask the ticket holder to complete the additional details required by {{ summit_reassign_ticket_till_date }}. If you prefer to complete the required details yourself, you may do so on the “<a target="_blank" href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>” page located in the top nav bar.</li>
                             <li>You must assign the ticket before the attendee details can be entered by you, the purchaser, or the ticket holder.</li>
                           </ul>
                         </div>
@@ -184,12 +184,17 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><strong> Once all required details are entered, the ticket will be issued and emailed to the assigned ticket holder.</strong> Tickets will not be issued if unassigned or incomplete.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">The "<a target="_blank" href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a>" page is located in the top nav bar of the {{ summit_name }} website. You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><a target="_blank" href="{{ manage_orders_url }}"><button class="btn btn-primary manage-btn">Manage "My Orders"</button></a></div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><strong>Once all required details are entered, the ticket will be issued and emailed to the assigned ticket holder.</strong> Tickets will not be issued if unassigned or incomplete.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><a target="_blank" href="{{ raw_summit_marketing_site_url }}"><button class="btn btn-primary manage-btn">Manage "My Orders/Tickets"</button></a></div>
                       </td>
                     </tr>
                     <tr>
@@ -209,12 +214,12 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to {{ summit_name }}.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to issuing your ticket and seeing you at {{ summit_name }}.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Thank you!<br />
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Thank you! <br>
                           {{ summit_name }} Support Team
                         </div>
                       </td>
@@ -226,7 +231,7 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:13px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:13px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
                       </td>
                     </tr>
                   </tbody>

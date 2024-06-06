@@ -163,19 +163,34 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Congratulations, {{ owner_full_name }}, has purchased the below ticket(s) for you to attend {{ summit_name }}. In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Hi {{owner_full_name}},</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Current registration information is below:</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><strong>In order to issue your ticket, you must provide or verify additional details. </strong> Please update on the <a target="_blank" href="{{ raw_summit_marketing_site_url }}"><strong>My Orders/Tickets</strong></a> page located in the top nav bar. You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Once the required additional details have been completed, you will receive another email with your ticket confirmation.</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><a class="button-link" target="_blank" href="{{ raw_summit_marketing_site_url }}"><button class="btn btn-primary manage-btn">Provide ticket details now</button></a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Your registration information is below:<br>
                           <ul>
-                            <li>Your ticket number:{{ ticket_number }}</li>
+                            <li>Ticket number: {{ ticket_number }}</li>
                             <li>Type: {{ ticket_type_name }}</li>
                             <li>Attendee: {{ owner_email }}</li> {% if need_details is defined and need_details is sameas true %} <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li> {% endif %}
                           </ul>
@@ -184,29 +199,27 @@
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">Please note, your ticket <strong>HAS NOT</strong> been issued yet. To validate your ticket, click the button below to fill in all outstanding details.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">If you do not wish to accept this ticket, please email {{ order_owner_full_name }} at <a href="mailto:{{order_owner_email}}?subject=RE:%20ticket%20to%20{{summit_name}}">{{ order_owner_email }}</a>, so that your ticket may be assigned to another person.</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;"><a class="button-link" target="_blank" href="{{ edit_ticket_link }}"><button class="btn btn-primary manage-btn">Accept your ticket to {{ summit_name }}</button></a></div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">{% if message is defined and message|length %}Here's a message from {{ order_owner_full_name }}: "{{ message }}".{% endif %}</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to issuing your ticket and seeing you at the {{ summit_name }}, <br />
-                          {{ summit_name }} Support Team
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="font-size:0px;word-break:break-word;">
-                        <div style="height:18px;line-height:18px;">&#8202;</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">We look forward to issuing your ticket and seeing you at {{ summit_name }},</div>
                       </td>
                     </tr>
                     <tr>
                       <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:13px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:16px;line-height:1.6;text-align:left;color:#53585F;">{{ summit_name }} Support Team</div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                        <div style="font-family:Open Sans, Arial, Helvetica, sans-serif;font-size:13px;line-height:1.6;text-align:left;color:#53585F;">PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</div>
                       </td>
                     </tr>
                   </tbody>

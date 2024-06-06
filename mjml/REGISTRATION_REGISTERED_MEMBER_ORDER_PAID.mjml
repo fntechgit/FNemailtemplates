@@ -4,7 +4,7 @@
     Template: REGISTRATION_REGISTERED_MEMBER_ORDER_PAID
     Version: 2
     Invoice based on https://github.com/sparksuite/simple-html-invoice-template
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Subject: Order Confirmation for {{ summit_name }}
     -->
     <mj-title>Order Confirmation, has FNid | {{ summit_name }}</mj-title>
@@ -165,7 +165,7 @@
   <mj-body width="700px">
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{ owner_full_name }},</mj-text>
         <mj-text>Thank you for purchasing ticket(s) to attend <strong>{{ summit_name }}</strong>.</mj-text>

@@ -3,7 +3,7 @@
     <!--
     Template Name: REGISTRATION_TICKET_REFUND_REQUESTED_OWNER
     Version: 1
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: Your ticket refund request for {{summit_name}} has been received
     -->
     <mj-title>Ticket Refund request has been received</mj-title>
@@ -69,7 +69,7 @@
   <mj-body width="700px">
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{ owner_full_name }},<br />
           Your refund request for <b>{{ summit_name }}</b> has been received.
@@ -105,7 +105,7 @@
         <mj-spacer height="18px" />
 
         <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
-          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+          PS: Should you have any questions or if we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
         </mj-text>
 
       </mj-column>

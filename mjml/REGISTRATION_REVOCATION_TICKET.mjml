@@ -3,7 +3,7 @@
     <!--
     Template Name: REGISTRATION_REVOCATION_TICKET
     Version: 1
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: Your registration for {{ summit_name }} has been cancelled
     -->
     <mj-title>Your registration for {{ summit_name }} has been cancelled</mj-title>
@@ -69,10 +69,18 @@
   <mj-body width="700px">
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
+        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{ owner_full_name }},</mj-text>
-        <mj-text>Your registration for {{ summit_name }} has been cancelled or reassigned. You are no longer registered to attend this event.</mj-text>
+        <mj-text>Your registration for {{ summit_name }} has been reassigned or cancelled.</mj-text>
+        <mj-text>For reference:
+        <ul>
+                <li>Ticket number: <small>{{ ticket_number }}</small></li>
+                <li>Type: {{ ticket_type_name }}</li>
+        </mj-text>
+        <mj-text>You may access your account and verify your tickets on the <a href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a> page located in the top nav bar. 
+             	You will be asked to log in using your FNid, social authorization, or a one-time use code can be emailed to you. 
+             	Please be sure to use this email address.</mj-text>
         <mj-text>Should you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information.</mj-text>
         <mj-text>We hope to see you at a future event. Thank you! <br />
           {{ summit_name }} Support Team

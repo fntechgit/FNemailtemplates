@@ -1,0 +1,42 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_TICKET_REFUND_REQUESTED_ADMIN
+    Version: 1
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: Ticket Refund Requested
+    -->
+    <mj-title>Ticket Refund Requested</mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section>
+      <mj-column>
+        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
+        <mj-spacer height="18px" />
+        <mj-text>Greetings Admin!</mj-text>
+        <mj-text>
+            {{ owner_full_name }} who placed an order for ticket {{ ticket_number }} at the {{ summit_name }} is <b>requesting a refund</b>.  Please login to the show admin portal and approve or deny the refund at your earliest convenience.
+        </mj-text>
+        <mj-text>Thank you! <br />
+          {{ summit_name }} Support Team
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
