@@ -110,7 +110,8 @@
   <style type="text/css">
     @media (max-width: 480px) {
       .font-size-fix>div {
-        font-size: 12px !important;
+        font-size:
+          12px !important;
         line-height: 1.5 !important;
       }
     }
@@ -128,7 +129,7 @@
   </style>
   <!-- Template Name: REGISTRATION_ATTENDEE_TICKET
     Version: 2
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: Your ticket for {{ summit_name }} -->
 </head>
 
@@ -156,18 +157,18 @@
                                   <tbody>
                                     <tr>
                                       <td style="width:320px;">
-                                        <img alt="Summit logo" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/fntech-logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="320">
+                                        <img alt="Summit logo" height="auto" src="{{ summit_logo }}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="320">
                                       </td>
                                     </tr>
                                   </tbody>
                                 </table>
                               </td>
                             </tr>
-                            <tr>
-                              <td align="center" class="indent-color font-size-fix" style="color: #FFB01C; font-size: 0px; padding: 0; word-break: break-word;">
-                                <div style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; font-weight: bold; letter-spacing: 0.05em; line-height: 24px; text-align: center; text-transform: uppercase; color: #FFB01C;">FILL IN DATE EXCERPT <br> FILL IN VENUE EXCERPT</div>
-                              </td>
-                            </tr>
+                            <!-- <mj-text css-class="indent-color font-size-fix" padding="0" font-weight="bold" align="center" letter-spacing="0.05em" text-transform="uppercase">
+          {{ summit_date }}
+          <br />
+          FILL IN VENUE EXCERPT
+        </mj-text> -->
                           </tbody>
                         </table>
                       </div>
@@ -203,7 +204,7 @@
                                   <tbody>
                                     <tr>
                                       <td style="width:600px;">
-                                        <img alt="Header top image" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-top.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                        <img alt="Header top image" height="auto" src="{{EMAIL_TEMPLATE_TICKET_TOP_GRAPHIC}}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
                                       </td>
                                     </tr>
                                   </tbody>
@@ -241,7 +242,7 @@
                           <tbody>
                             <tr>
                               <td style="width:600px;">
-                                <img alt="Header bottom image" height="auto" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-bottom.jpg" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
+                                <img alt="Header bottom image" height="auto" src="{{EMAIL_TEMPLATE_TICKET_BOTTOM_GRAPHIC}}" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" width="600">
                               </td>
                             </tr>
                           </tbody>
@@ -258,7 +259,8 @@
       </table>
     </div>
     <!--[if mso | IE]></td></tr></table><table align="center" border="0" cellpadding="0" cellspacing="0" class="body-section-outlook" role="presentation" style="width:600px;" width="600" bgcolor="#FFFFFF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-    <div class="body-section" style="-webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); background: #FFFFFF; background-color: #FFFFFF; margin: 0px auto; max-width: 600px;">
+    <div class="body-section" style="-webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); box-shadow: 1px 4px
+      11px 0px rgba(0, 0, 0, 0.15); background: #FFFFFF; background-color: #FFFFFF; margin: 0px auto; max-width: 600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#FFFFFF;background-color:#FFFFFF;width:100%;">
         <tbody>
           <tr>
@@ -340,11 +342,16 @@
                               <tr>
                                 <td align="left" class="ticket" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">
-                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-ticket.png') padding-box no-repeat; background-size: 14.88px;">
-                                      <li>Ticket Type: <span class="light-gray" style="color: #888888;">{{ ticket_type_name }}</span></li>
-                                      <li>Attendee: <span class="light-gray" style="color: #888888;">{{ owner_email }}</span></li>
-                                      <li>Promo Code: <span class="light-gray" style="color: #888888;">{{ promo_code }}</span></li>
-                                      <li>Price: <span class="light-gray" style="color: #888888;">{{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</span></li>
+                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-ticket.png')
+      padding-box no-repeat; background-size: 14.88px;">
+                                      <li> Ticket Type: <span class="light-gray" style="color: #888888;">{{ ticket_type_name }}</span>
+                                      </li>
+                                      <li> Attendee: <span class="light-gray" style="color: #888888;">{{ owner_email }}</span>
+                                      </li>
+                                      <li> Promo Code: <span class="light-gray" style="color: #888888;">{{ promo_code }}</span>
+                                      </li>
+                                      <li> Price: <span class="light-gray" style="color: #888888;">{{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</span>
+                                      </li>
                                     </ul>
                                   </div>
                                 </td>
@@ -352,8 +359,9 @@
                               <tr>
                                 <td align="left" class="date" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">
-                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-date.png') no-repeat; background-size: 17.14px;">
-                                      <li>Date: <span class="light-gray" style="color: #888888;">FILL IN SUMMIT DATE</span></li>
+                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-date.png')
+      no-repeat; background-size: 17.14px;">
+                                      <li>Date: <span class="light-gray" style="color: #888888;">{{summit_date}}</span></li>
                                     </ul>
                                   </div>
                                 </td>
@@ -361,8 +369,10 @@
                               <tr>
                                 <td align="left" class="address" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:16px;font-weight:400;line-height:24px;text-align:left;color:#161616;">
-                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-address.png') no-repeat; background-size: 20px;">
-                                      <li>Address: <span class="light-gray" style="color: #888888;">FILL IN VENUE ADDRESS</span></li>
+                                    <ul style="margin: 0; padding-inline-start: 30px; list-style: none; background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-address.png')
+      no-repeat; background-size: 20px;">
+                                      <li> Address: <span class="light-gray" style="color: #888888;">FILL IN VENUE ADDRESS</span>
+                                      </li>
                                     </ul>
                                   </div>
                                 </td>

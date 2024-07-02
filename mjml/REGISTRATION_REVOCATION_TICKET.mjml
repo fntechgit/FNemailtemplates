@@ -36,6 +36,10 @@
         font-weight: 600;
       }
 
+        .banner-full-width {
+        height: 300px;
+      }
+
       .btn-primary:hover {
         background-color: #77787c;
       }
@@ -67,10 +71,17 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
-        <mj-spacer height="18px" />
         <mj-text>Hi {{ owner_full_name }},</mj-text>
         <mj-text>Your registration for {{ summit_name }} has been reassigned or cancelled.</mj-text>
         <mj-text>For reference:
@@ -81,7 +92,7 @@
         <mj-text>You may access your account and verify your tickets on the <a href="{{ raw_summit_marketing_site_url }}">My Orders/Tickets</a> page located in the top nav bar. 
              	You will be asked to log in using your FNid, social authorization, or a one-time use code can be emailed to you. 
              	Please be sure to use this email address.</mj-text>
-        <mj-text>Should you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information.</mj-text>
+        <mj-text>If you believe this was a mistake, please contact the purchaser {{order_owner_full_name}} at <a href="mailto:{{order_owner_email}}" target="_blank">{{order_owner_email}}</a> for more information.</mj-text>
         <mj-text>We hope to see you at a future event. Thank you! <br />
           {{ summit_name }} Support Team
         </mj-text>

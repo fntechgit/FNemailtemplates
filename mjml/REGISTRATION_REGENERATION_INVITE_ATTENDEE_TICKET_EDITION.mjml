@@ -2,7 +2,7 @@
   <mj-head>
     <!--
     Template Name: REGISTRATION_REGENERATION_INVITE_ATTENDEE_TICKET_EDITION
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: {{summit_name}}: You are registered, but action still needed! 
     -->
     <mj-title>Additional Information Required (Regeneration)| {{ summit_name }}</mj-title>
@@ -33,6 +33,10 @@
       .details_needed {
         color: red;
         font-weight: 600;
+      }
+
+       .banner-full-width {
+        height: 300px;
       }
 
       .btn-primary:hover {
@@ -66,11 +70,21 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
-        <mj-spacer height="18px" />
-            <mj-text>Congratulations, {{order_owner_full_name}} has purchased the below ticket(s) for you to attend {{ summit_name }}.  In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.</mj-text>
+             <mj-text>
+              Congratulations, {{order_owner_full_name}} has purchased the below ticket(s) for you to attend {{ summit_name }}.  
+              In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.
+            </mj-text>
              <mj-text>Current registration information is below:<br>
                 <ul>
                   <li>Your Ticket number: {{ ticket_number }}</li>

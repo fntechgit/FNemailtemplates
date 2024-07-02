@@ -1,6 +1,6 @@
 <mjml>
   <mj-head>
-    <!-- 
+  <!-- 
     Template: REGISTRATION_REGISTERED_MEMBER_ORDER_PAID
     Version: 2
     Invoice based on https://github.com/sparksuite/simple-html-invoice-template
@@ -10,7 +10,7 @@
     <mj-title>Order Confirmation, has FNid | {{ summit_name }}</mj-title>
     <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
     <mj-attributes>
-      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+      <mj-text font-size="16px" line-height="24px" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
     </mj-attributes>
     <mj-style>
       p {
@@ -37,33 +37,8 @@
         font-weight: 600;
       }
 
-      .btn-primary:hover {
-        background-color: #77787c;
-      }
-
-      .btn-primary {
-        box-sizing: border-box;
-        margin: 0;
-        font: inherit;
-        overflow: visible;
-        text-transform: none;
-        -webkit-appearance: button;
-        font-family: inherit;
-        display: inline-block;
-        padding: 6px 12px;
-        font-weight: 400;
-        line-height: 1.42857143;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        touch-action: manipulation;
-        cursor: pointer;
-        user-select: none;
-        background-image: none;
-        border-radius: 4px;
-        background-color: #5e5f62;
-        color: #ffffff !important;
-        border: none;
+      .banner-full-width {
+        height: 300px;
       }
 
       /* Invoice CSS */
@@ -73,10 +48,12 @@
         text-align: center;
       }
 
+      .invoice-section {
+        width: 80vw;
+      }
+
       .invoice-box {
-        max-width: 800px;
         margin: 0 auto 1rem;
-        padding: 30px;
         border: 1px solid #eee;
         box-shadow: 0 0 10px rgba(0, 0, 0, .15);
         font-size: 16px;
@@ -86,7 +63,8 @@
       }
 
       .invoice-box table {
-        width: 100%;
+        margin: 0 auto;
+        width: 80%;
         line-height: inherit;
         text-align: left;
       }
@@ -163,14 +141,29 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
         <mj-spacer height="18px" />
         <mj-text>Hi {{ owner_full_name }},</mj-text>
-        <mj-text>Thank you for purchasing ticket(s) to attend <strong>{{ summit_name }}</strong>.</mj-text>
+        <mj-text
+          >Thank you for purchasing ticket(s) to attend
+          <strong>{{ summit_name }}</strong>.</mj-text
+        >
         <mj-text>This is your order confirmation and details are below:</mj-text>
-        <mj-spacer height="18px" />
+        <mj-spacer height="18px"
+      /></mj-column>
+    </mj-section>
+    <mj-section css-class="invoice-section">
+      <mj-column>
         <mj-text css-class="invoice-box">
           <table cellpadding="0" cellspacing="0">
             <tr class="top">
@@ -179,47 +172,32 @@
               </td>
             </tr>
             <tr class="heading">
-              <td colspan="2">
-                Your Order Details
-              </td>
+              <td colspan="2">Your Order Details</td>
             </tr>
 
             <tr class="details">
-              <td>
-                Order Number:
-              </td>
+              <td>Order Number:</td>
               <td>
                 <strong>{{ order_number }}</strong>
               </td>
             </tr>
             <tr class="details">
-              <td>
-                Purchaser:
-              </td>
-              <td>
-                {{ owner_full_name }}
-              </td>
+              <td>Purchaser:</td>
+              <td>{{ owner_full_name }}</td>
             </tr>
             <tr class="details">
-              <td>
-                Company:
-              </td>
-              <td>
-                {{ owner_company }}<br>
-              </td>
+              <td>Company:</td>
+              <td>{{ owner_company }}<br /></td>
             </tr>
             <tr class="details">
+              <td>Amount Paid In Full:</td>
               <td>
-                Amount Paid In Full:
-              </td>
-              <td>
-                {{ order_currency_symbol }}{{ order_amount }} {{ order_currency }}
+                {{ order_currency_symbol }}{{ order_amount }} {{ order_currency
+                }}
               </td>
             </tr>
             <tr class="heading">
-              <td colspan="2">
-                Tickets Included:
-              </td>
+              <td colspan="2">Tickets Included:</td>
             </tr>
 
             <tr class="tickets">
@@ -231,23 +209,27 @@
                     <ul>
                       <li>Type: {{ ticket.ticket_type_name }}</li>
                       <li>
-                        {% if ticket.has_owner is defined and ticket.has_owner is sameas true %}
-                        Attendee: {{ ticket.owner_email }}
-                        {% else %}
+                        {% if ticket.has_owner is defined and ticket.has_owner
+                        is sameas true %} Attendee: {{ ticket.owner_email }} {%
+                        else %}
                         <span class="details_needed">Attendee: UNASSIGNED</span>
                         {% endif %}
                       </li>
                       <li>
-                        Promo Code:
-                        {% if ticket.promo_code is defined %}
-                        ({{ ticket.promo_code.code }})
-                        {% else %}
-                        None
-                        {% endif %}
+                        Promo Code: {% if ticket.promo_code is defined %} ({{
+                        ticket.promo_code.code }}) {% else %} None {% endif %}
                       </li>
-                      <li>Price: {{ticket.currency_symbol}}{{ ticket.price }} {{ ticket.currency}}</li>
-                      {% if ticket.need_details is defined and  ticket.need_details is sameas true %}
-                      <li><span class="details_needed">Additional Information Required to Issue Ticket</span></li>
+                      <li>
+                        Price: {{ticket.currency_symbol}}{{ ticket.price }} {{
+                        ticket.currency}}
+                      </li>
+                      {% if ticket.need_details is defined and
+                      ticket.need_details is sameas true %}
+                      <li>
+                        <span class="details_needed"
+                          >Additional Information Required to Issue Ticket</span
+                        >
+                      </li>
                       {% endif %}
                     </ul>
                   </li>
@@ -257,6 +239,10 @@
             </tr>
           </table>
         </mj-text>
+        </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
         <mj-spacer height="18px" />
         <mj-text>
           <strong>PLEASE NOTE!</strong><br />
@@ -280,7 +266,6 @@
         <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
           PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
         </mj-text>
-
       </mj-column>
     </mj-section>
   </mj-body>

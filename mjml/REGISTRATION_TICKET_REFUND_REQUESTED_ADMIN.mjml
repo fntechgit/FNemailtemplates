@@ -21,13 +21,24 @@
         color: #53585F;
       }
 
+      .banner-full-width {
+        height: 300px;
+      }
+
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+</mj-section>
     <mj-section>
       <mj-column>
-        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
-        <mj-spacer height="18px" />
         <mj-text>Greetings Admin!</mj-text>
         <mj-text>
             {{ owner_full_name }} who placed an order for ticket {{ ticket_number }} at the {{ summit_name }} is <b>requesting a refund</b>.  Please login to the show admin portal and approve or deny the refund at your earliest convenience.

@@ -35,6 +35,10 @@
         color: red;
         font-weight: 600;
       }
+      
+        .banner-full-width {
+        height: 300px;
+      }
 
       .btn-primary:hover {
         background-color: #77787c;
@@ -67,11 +71,17 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+</mj-section>
     <mj-section>
       <mj-column>
-        <mj-image alt="{{ summit_name }}" src="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}" />
-        <mj-spacer height="18px" />
-
         <mj-text>
           Hi {{ owner_full_name }},<br />
           Reminder! You have a ticket to attend {{ summit_name }} that <strong>*HAS NOT*</strong> been issued yet.

@@ -45,6 +45,11 @@
         font-weight: 600;
       }
 
+        .banner-full-width {
+        height: 300px;
+      }
+
+
       .email-cta {
         background-color: #5e5f62;
         width: 75%;
@@ -98,10 +103,17 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+               background-position="center" 
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <mj-image alt="{{ summit_name }}" src="{{EMAIL_TEMPLATE_GENERIC_BANNER}}" />
-        <mj-spacer height="18px" />
         <mj-text>Hi {{owner_full_name}},</mj-text>
         <mj-text>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</mj-text>
         <mj-text font-weight="700">
