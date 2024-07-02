@@ -1,0 +1,83 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_ORDER_CANCELLED
+    Version: 1
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: {{summit_name} Order Cancelled
+    -->
+    <mj-title>ORDER CANCELLED | {{summit_name}}</mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      .email-link {
+        color: #53585F;
+      }
+
+      button {
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+       .banner-full-width {
+        height: 300px;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+</mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-text>
+        Hi, {{ owner_full_name }}, your order {{ order_number }} for {{ summit_name }} got cancelled because you did not take any action to pay it.
+        </mj-text>
+
+        <mj-text>
+          Thank you,
+        </mj-text>
+        <mj-text>
+         {{ summit_name }} Support Team
+        </mj-text>
+
+
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

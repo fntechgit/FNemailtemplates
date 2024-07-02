@@ -3,7 +3,7 @@
     <!--
     Template Name: REGISTRATION_ATTENDEE_TICKET
     Version: 2
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: Your ticket for {{ summit_name }}
     -->
     <mj-title>{{ summit_name }} ticket</mj-title>
@@ -12,115 +12,92 @@
       <!--
       <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
       -->
-      <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
-      <mj-text font-weight="400" font-size="16px" color="#161616" line-height="24px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-text>
+      <mj-all
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      ></mj-all>
+      <mj-text
+        font-weight="400"
+        font-size="16px"
+        color="#161616"
+        line-height="24px"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+      ></mj-text>
     </mj-attributes>
     <mj-style inline="inline">
-      .body-section {
-        -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
-        -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
-        box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
-      }
+      .body-section { -webkit-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 1px 4px 11px 0px rgba(0, 0, 0, 0.15); box-shadow: 1px 4px
+      11px 0px rgba(0, 0, 0, 0.15); }
     </mj-style>
     <mj-style inline="inline">
-      .indent-color {
-        color: #FFB01C;
-      }
-      .indent-color > div {
-        color: #FFB01C!important;
-      }
-      .contrast-color {
-        color: #FD091B;
-      }
-      .contrast-color > div {
-        color: #FD091B!important;
-      }
-      .dark-gray {
-        color: #161616;
-      }
-      .light-gray {
-        color: #888888!important;
-      }
-      .light-gray > div {
-        color: #888888!important;
-      }
-      .no-text-decoration {
-        text-decoration: none;
-      }
+      .indent-color { color: #FFB01C; } .indent-color > div { color:
+      #FFB01C!important; } .contrast-color { color: #FD091B; } .contrast-color >
+      div { color: #FD091B!important; } .dark-gray { color: #161616; }
+      .light-gray { color: #888888!important; } .light-gray > div { color:
+      #888888!important; } .no-text-decoration { text-decoration: none; }
     </mj-style>
     <mj-style inline="inline">
       .header {
-        <!--Dark Mode hack to override email clients changing background colors -->
-        background: linear-gradient(#000000, #000000);
-        background-color: #000000;
+      <!--Dark Mode hack to override email clients changing background colors -->
+      background: linear-gradient(#000000, #000000); background-color: #000000;
       }
     </mj-style>
     <mj-style inline="inline">
-      .ticket-information ul {
-        margin: 0;
-        padding-inline-start: 30px;
-        list-style: none;
-      }
-      .ticket ul {
-        background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-ticket.png') padding-box no-repeat;
-        background-size: 14.88px;
-      }
-      .date ul {
-        background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-date.png') no-repeat;
-        background-size: 17.14px;
-      }
-      .address ul {
-        background: url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-address.png') no-repeat;
-        background-size: 20px;
-      }
+      .ticket-information ul { margin: 0; padding-inline-start: 30px;
+      list-style: none; } .ticket ul { background:
+      url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-ticket.png')
+      padding-box no-repeat; background-size: 14.88px; } .date ul { background:
+      url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-date.png')
+      no-repeat; background-size: 17.14px; } .address ul { background:
+      url('https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-address.png')
+      no-repeat; background-size: 20px; }
     </mj-style>
     <mj-style>
-      @media (max-width: 480px) {
-        .font-size-fix > div {
-          font-size: 12px!important;
-          line-height: 1.5!important;
-        }
-      }
+      @media (max-width: 480px) { .font-size-fix > div { font-size:
+      12px!important; line-height: 1.5!important; } }
     </mj-style>
     <mj-style inline="inline">
-      .section-border > table {
-        border-collapse: separate;
-      }
-      .section-border > table > tbody > tr > td {
-        border-radius: 10px;
-      }
-      .column-border > table table {
-        border-collapse: separate;
-      }
+      .section-border > table { border-collapse: separate; } .section-border >
+      table > tbody > tr > td { border-radius: 10px; } .column-border > table
+      table { border-collapse: separate; }
     </mj-style>
     <mj-style>
-      @media (max-width: 480px) {
-        .column-mobile-gut-fix > table > tbody > tr > td {
-          padding: 0px!important;
-        }
-        .column-mobile-gut-fix + .column-mobile-gut-fix {
-          padding-top: 20px;
-        }
-      }
+      @media (max-width: 480px) { .column-mobile-gut-fix > table > tbody > tr >
+      td { padding: 0px!important; } .column-mobile-gut-fix +
+      .column-mobile-gut-fix { padding-top: 20px; } }
     </mj-style>
   </mj-head>
   <mj-body background-color="#D9D9D9" width="600px">
-     <mj-section css-class="header" full-width="full-width">
+    <mj-section css-class="header" full-width="full-width">
       <mj-column width="70%">
-        <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/fntech-logo.png" alt="Summit logo" align="center" padding="50px" />
-        <mj-text css-class="indent-color font-size-fix" padding="0" font-weight="bold" align="center" letter-spacing="0.05em" text-transform="uppercase">
-          FILL IN DATE EXCERPT
+        <mj-image
+          src="{{ summit_logo }}"
+          alt="Summit logo"
+          align="center"
+          padding="50px"
+        />
+        <!-- <mj-text css-class="indent-color font-size-fix" padding="0" font-weight="bold" align="center" letter-spacing="0.05em" text-transform="uppercase">
+          {{ summit_date }}
           <br />
           FILL IN VENUE EXCERPT
-        </mj-text>
+        </mj-text> -->
       </mj-column>
     </mj-section>
-    <mj-section css-class="header" full-width="full-width" padding-top="0" padding-bottom="0">
+    <mj-section
+      css-class="header"
+      full-width="full-width"
+      padding-top="0"
+      padding-bottom="0"
+    >
       <mj-column width="100%">
         <!--
           Use https://pinetools.com/split-image to slit header image into 2, a top and a bottom one
         -->
-        <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-top.jpg" width="600px" alt="Header top image" padding="0" />
+        <mj-image
+          src="{{EMAIL_TEMPLATE_TICKET_TOP_GRAPHIC}}"
+          width="600px"
+          alt="Header top image"
+          padding="0"
+        />
       </mj-column>
     </mj-section>
     <mj-section padding-top="0" padding-bottom="0">
@@ -128,71 +105,163 @@
         <!--
           Use https://pinetools.com/split-image to slit header image into 2, a top and a bottom one
         -->
-        <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/header-bottom.jpg" width="600px" alt="Header bottom image" padding="0" />
+        <mj-image
+          src="{{EMAIL_TEMPLATE_TICKET_BOTTOM_GRAPHIC}}"
+          width="600px"
+          alt="Header bottom image"
+          padding="0"
+        />
       </mj-column>
     </mj-section>
-    <mj-wrapper padding="0 30px" background-color="#FFFFFF" css-class="body-section">
+    <mj-wrapper
+      padding="0 30px"
+      background-color="#FFFFFF"
+      css-class="body-section"
+    >
       <mj-section>
         <mj-column width="100%">
           <mj-text font-weight="bold" padding-left="0" padding-right="0">
             Thanks {{ owner_full_name }}
           </mj-text>
           <mj-text padding-left="0" padding-right="0">
-            You have provided the additional details required to issue your ticket for <span class="contrast-color">{{ summit_name }}</span>.
+            You have provided the additional details required to issue your
+            ticket for <span class="contrast-color">{{ summit_name }}</span>.
           </mj-text>
         </mj-column>
       </mj-section>
-      <mj-section css-class="section-border" border="1px solid black" padding="20px 0">
+      <mj-section
+        css-class="section-border"
+        border="1px solid black"
+        padding="20px 0"
+      >
         <mj-column width="100%">
-          <mj-text css-class="indent-color" text-transform="uppercase" font-weight="bold" padding-bottom="0" align="center">
+          <mj-text
+            css-class="indent-color"
+            text-transform="uppercase"
+            font-weight="bold"
+            padding-bottom="0"
+            align="center"
+          >
             Your Ticket Information
           </mj-text>
           <mj-text padding-bottom="0">
-            You may use the QR code below to expedite check-in at the {{ summit_name }} registration counter.
+            You may use the QR code below to expedite check-in at the {{
+            summit_name }} registration counter.
           </mj-text>
-          <mj-image src="cid:qrcid" width="300px" alt="Ticket QR Code" padding-bottom="0" />
-          <mj-text font-size="13px" text-transform="uppercase" padding-top="0" align="center">
+          <mj-image
+            src="cid:qrcid"
+            width="300px"
+            alt="Ticket QR Code"
+            padding-bottom="0"
+          />
+          <mj-text
+            font-size="13px"
+            text-transform="uppercase"
+            padding-top="0"
+            align="center"
+          >
             {{ ticket_number }}
           </mj-text>
         </mj-column>
         <mj-column css-class="ticket-information" width="100%">
           <mj-text css-class="ticket">
             <ul>
-              <li>Ticket Type: <span class="light-gray">{{ ticket_type_name }}</span></li>
-              <li>Attendee: <span class="light-gray">{{ owner_email }}</span></li>
-              <li>Promo Code: <span class="light-gray">{{ promo_code }}</span></li>
-              <li>Price: <span class="light-gray">{{ ticket_currency_symbol }}{{ ticket_amount }} {{ ticket_currency }}</span></li>
+              <li>
+                Ticket Type:
+                <span class="light-gray">{{ ticket_type_name }}</span>
+              </li>
+              <li>
+                Attendee: <span class="light-gray">{{ owner_email }}</span>
+              </li>
+              <li>
+                Promo Code: <span class="light-gray">{{ promo_code }}</span>
+              </li>
+              <li>
+                Price:
+                <span class="light-gray"
+                  >{{ ticket_currency_symbol }}{{ ticket_amount }} {{
+                  ticket_currency }}</span
+                >
+              </li>
             </ul>
           </mj-text>
           <mj-text css-class="date">
             <ul>
-              <li>Date: <span class="light-gray">FILL IN SUMMIT DATE</span></li>
+              <li>Date: <span class="light-gray">{{summit_date}}</span></li>
             </ul>
           </mj-text>
           <mj-text css-class="address">
             <ul>
-              <li>Address: <span class="light-gray">FILL IN VENUE ADDRESS</span></li>
+              <li>
+                Address: <span class="light-gray">FILL IN VENUE ADDRESS</span>
+              </li>
             </ul>
           </mj-text>
         </mj-column>
       </mj-section>
       <mj-section>
-        <mj-column width="50%" css-class="column-border column-mobile-gut-fix" padding-right="10px" inner-border="1px solid black" inner-border-radius="10px">
-          <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-profile.png" alt="Link to My Profile" width="78px" href="{{raw_summit_marketing_site_url}}/a/my-profile" padding-top="24px" />
+        <mj-column
+          width="50%"
+          css-class="column-border column-mobile-gut-fix"
+          padding-right="10px"
+          inner-border="1px solid black"
+          inner-border-radius="10px"
+        >
+          <mj-image
+            src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-profile.png"
+            alt="Link to My Profile"
+            width="78px"
+            href="{{raw_summit_marketing_site_url}}/a/my-profile"
+            padding-top="24px"
+          />
           <mj-text font-weight="bold" align="center">
-            <a class="dark-gray no-text-decoration" href="{{ raw_summit_marketing_site_url }}/a/my-profile">My Profile</a>
+            <a
+              class="dark-gray no-text-decoration"
+              href="{{ raw_summit_marketing_site_url }}/a/my-profile"
+              >My Profile</a
+            >
           </mj-text>
           <mj-text font-size="15px" padding="0 30px 20px 30px" align="center">
-            <a class="dark-gray no-text-decoration" href="{{ raw_summit_marketing_site_url }}/a/my-profile">Access your account and update your profile <span class="contrast-color" style="text-decoration: underline;">here</span></a>
+            <a
+              class="dark-gray no-text-decoration"
+              href="{{ raw_summit_marketing_site_url }}/a/my-profile"
+              >Access your account and update your profile
+              <span class="contrast-color" style="text-decoration: underline"
+                >here</span
+              ></a
+            >
           </mj-text>
         </mj-column>
-        <mj-column width="50%" css-class="column-border column-mobile-gut-fix" padding-left="10px" inner-border="1px solid black" inner-border-radius="10px">
-          <mj-image src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-orders.png" alt="Link to My Orders/Tickets dashboard" href="{{ raw_summit_marketing_site_url }}/a/my-tickets" width="78px" padding-top="24px" />
+        <mj-column
+          width="50%"
+          css-class="column-border column-mobile-gut-fix"
+          padding-left="10px"
+          inner-border="1px solid black"
+          inner-border-radius="10px"
+        >
+          <mj-image
+            src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-orders.png"
+            alt="Link to My Orders/Tickets dashboard"
+            href="{{ raw_summit_marketing_site_url }}/a/my-tickets"
+            width="78px"
+            padding-top="24px"
+          />
           <mj-text font-weight="bold" align="center">
-            <a class="dark-gray no-text-decoration" href="{{ edit_ticket_link }}/a/my-tickets">My Orders/Tickets</a>
+            <a
+              class="dark-gray no-text-decoration"
+              href="{{ edit_ticket_link }}/a/my-tickets"
+              >My Orders/Tickets</a
+            >
           </mj-text>
           <mj-text font-size="15px" padding="0 30px 20px 30px" align="center">
-            <a class="dark-gray no-text-decoration" href="{{ raw_summit_marketing_site_url }}/a/my-tickets">Review or update your ticket(s) details <span class="indent-color" style="text-decoration: underline;">here</span></a>
+            <a
+              class="dark-gray no-text-decoration"
+              href="{{ raw_summit_marketing_site_url }}/a/my-tickets"
+              >Review or update your ticket(s) details
+              <span class="indent-color" style="text-decoration: underline"
+                >here</span
+              ></a
+            >
           </mj-text>
         </mj-column>
       </mj-section>
@@ -208,10 +277,14 @@
           <mj-text padding-left="0" padding-right="0">
             We're looking forward meeting you at {{ summit_name }}.
           </mj-text>
-          <mj-text font-weight="bold" padding="0">
-            Thank you!
-          </mj-text>
-          <mj-text css-class="contrast-color" font-weight="bold" padding-top="0" padding-left="0" padding-right="0">
+          <mj-text font-weight="bold" padding="0"> Thank you! </mj-text>
+          <mj-text
+            css-class="contrast-color"
+            font-weight="bold"
+            padding-top="0"
+            padding-left="0"
+            padding-right="0"
+          >
             {{ summit_name }} Support Team
           </mj-text>
         </mj-column>
@@ -220,12 +293,36 @@
     <mj-wrapper full-width="full-width">
       <mj-section padding-top="10px" padding-bottom="10px">
         <mj-column width="100%" padding="0">
-          <mj-social font-size="15px" icon-size="26px"  mode="horizontal" padding="0" align="center">
-            <mj-social-element name="twitter-noshare" href="https://twitter.com/" background-color="transparent" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-twitter.png" padding="8px">
+          <mj-social
+            font-size="15px"
+            icon-size="26px"
+            mode="horizontal"
+            padding="0"
+            align="center"
+          >
+            <mj-social-element
+              name="twitter-noshare"
+              href="https://twitter.com/"
+              background-color="transparent"
+              src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-twitter.png"
+              padding="8px"
+            >
             </mj-social-element>
-            <mj-social-element name="linkedin-noshare" href="https://www.linkedin.com/" background-color="transparent" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-linkedin.png" padding="8px">
+            <mj-social-element
+              name="linkedin-noshare"
+              href="https://www.linkedin.com/"
+              background-color="transparent"
+              src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-linkedin.png"
+              padding="8px"
+            >
             </mj-social-element>
-            <mj-social-element name="facebook-noshare" href="https://www.facebook.com/" background-color="transparent" src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-facebook.png" padding="8px">
+            <mj-social-element
+              name="facebook-noshare"
+              href="https://www.facebook.com/"
+              background-color="transparent"
+              src="https://spaces.fnvirtual.app/emails/REGISTRATION_ATTENDEE_TICKET/icon-facebook.png"
+              padding="8px"
+            >
             </mj-social-element>
           </mj-social>
         </mj-column>
@@ -234,7 +331,14 @@
         <mj-group>
           <mj-column width="100%" padding-right="0">
             <mj-text font-size="14px" align="center" line-height="18px">
-              Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a class="dark-gray no-text-decoration" style="font-weight: bold;" href="mailto:{{ support_email }}">{{ support_email }}</a>
+              Should you have any questions or require further assistance,
+              please contact the {{ summit_name }} support team at
+              <a
+                class="dark-gray no-text-decoration"
+                style="font-weight: bold"
+                href="mailto:{{ support_email }}"
+                >{{ support_email }}</a
+              >
             </mj-text>
           </mj-column>
         </mj-group>

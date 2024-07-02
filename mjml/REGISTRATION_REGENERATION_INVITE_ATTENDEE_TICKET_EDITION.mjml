@@ -2,7 +2,7 @@
   <mj-head>
     <!--
     Template Name: REGISTRATION_REGENERATION_INVITE_ATTENDEE_TICKET_EDITION
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: {{summit_name}}: You are registered, but action still needed! 
     -->
     <mj-title>Additional Information Required (Regeneration)| {{ summit_name }}</mj-title>
@@ -33,6 +33,10 @@
       .details_needed {
         color: red;
         font-weight: 600;
+      }
+
+       .banner-full-width {
+        height: 300px;
       }
 
       .btn-primary:hover {
@@ -66,19 +70,24 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
-        <mj-spacer height="18px" />
-            <mj-text>Hi {{owner_full_name}},</mj-text>
-            <mj-text>{{order_owner_full_name}} has purchased a ticket for you to attend {{ summit_name }}. Your ticket *HAS NOT* been issued yet.</mj-text>
-            <mj-text><strong>In order to issue your ticket, you must provide or verify additional details. </strong> Please update on the <a target="_blank" href="{{ raw_summit_marketing_site_url }}"><strong>My Orders/Tickets</strong></a> page located in the top nav bar. 
-              You will be asked to log in using your FNid, social authorization, or a one-time-use code can be emailed to you. Please be sure to use this email address.</mj-text> 
-            <mj-text>Once the required additional details have been completed, you will receive another email with your ticket confirmation. </mj-text>
-            <mj-text><a class="button-link" target="_blank" href="{{ raw_summit_marketing_site_url }}"><button class="btn btn-primary manage-btn">Provide ticket details now</button></a></mj-text>  
-            <mj-text>Your registration information is below:<br>
+             <mj-text>
+              Congratulations, {{order_owner_full_name}} has purchased the below ticket(s) for you to attend {{ summit_name }}.  
+              In order to claim your ticket, you must <a href="{{ edit_ticket_link }}" target="_blank">fill in the required details</a> to complete your registration.
+            </mj-text>
+             <mj-text>Current registration information is below:<br>
                 <ul>
-                  <li>Ticket number: {{ ticket_number }}</li>
+                  <li>Your Ticket number: {{ ticket_number }}</li>
                   <li>Type: {{ ticket_type_name }}</li>
                   <li>Attendee: {{ owner_email }}</li>
                   {% if need_details is defined and need_details is sameas true %}
@@ -86,14 +95,18 @@
                   {% endif %}
                 </ul>
             </mj-text>
-            <mj-text>If you do not wish to accept this ticket, please email {{ order_owner_full_name }} at <a href="mailto:{{order_owner_email}}?subject=RE:%20ticket%20to%20{{summit_name}}" >{{ order_owner_email }}</a>, so that your ticket may be assigned to another person.</mj-text>
-      
+            <mj-text>
+              Please note, your ticket <strong>HAS NOT</strong> been issued yet. To validate your ticket, click the button below to fill in all outstanding details.
+            </mj-text>
+           <mj-button target="_blank" href="{{ summit_marketing_site_url }}#login=1&email={{owner_email}}&BackUrl=/a/my-tickets">
+            Accept your ticket to {{ summit_name }}
+           </mj-button>
 <mj-text>{% if message is defined and message|length %}Here's a message from {{ order_owner_full_name }}: "{{ message }}".{% endif %}</mj-text>
 	  
             <mj-text>We look forward to issuing your ticket and seeing you at {{ summit_name }},</mj-text>
             <mj-text>{{ summit_name }} Support Team</mj-text>
           
-            <mj-text font-size="13px">PS: Should you have any questions or require further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</mj-text>
+            <mj-text font-size="13px">PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.</mj-text>
        
 
       </mj-column>

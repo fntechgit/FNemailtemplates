@@ -3,8 +3,8 @@
     <!--
     Template Name: REGISTRATION_ORDER_REFUND_REQUESTED_OWNER
     Version: 1
-    From Email: registration@fntech.com
-    Use Subject: {{ summit_name }}: You order refund request has been received
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: {{ summit_name }}: Your order refund request has been received
     -->
     <mj-title>Order refund request has been received | {{ summit_name }}</mj-title>
     <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700" />
@@ -35,13 +35,25 @@
         color: red;
         font-weight: 600;
       }
+
+      .banner-full-width {
+        height: 300px;
+      }
+
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+</mj-section>
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
-        <mj-spacer height="18px" />
         <mj-text>
           Hi {{ owner_full_name }},
         </mj-text>
@@ -98,7 +110,7 @@
         <mj-spacer height="18px" />
 
         <mj-text font-size="13px" font-family="Open Sans, Arial, Helvetica, sans-serif">
-          PS: Should you have any questions or we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+          PS: Should you have any questions or if we can provide any further assistance, please contact the {{ summit_name }} support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
         </mj-text>
 
       </mj-column>

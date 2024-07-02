@@ -4,7 +4,7 @@
     Template: REGISTRATION_UNREGISTERED_MEMBER_ORDER_PAID
     Version: 2
     Invoice based on https://github.com/sparksuite/simple-html-invoice-template
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Subject: {{summit_name}}: Order Confirmation, action still needed!
     -->
     <mj-title>Order Confirmation, needs FNid | {{summit_name}}</mj-title>
@@ -35,6 +35,10 @@
       .details_needed {
         color: red;
         font-weight: 600;
+      }
+      
+        .banner-full-width {
+        height: 300px;
       }
 
       .btn-primary:hover {
@@ -167,17 +171,24 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+</mj-section>
     <mj-section>
       <mj-column>
-        <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
-        <mj-spacer height="18px" />
-
         <mj-text>Hi {{ owner_full_name }},</mj-text>
         <mj-text>Thank you for purchasing ticket(s) to attend <strong>{{ summit_name }}</strong>.</mj-text>
         <mj-text>You do not currently have an FNid. Simply click the button below to create an FNid account:</mj-text>
         <mj-text><a href="{{ set_password_link }}" target="_blank"><button class="btn btn-primary manage-btn">Create an FNid Account</button></a></mj-text>
         <mj-spacer height="18px" />
         <mj-text>This is your order confirmation and details are below:</mj-text>
+        <mj-spacer height="18px" />
         <mj-text css-class="invoice-box">
           <table cellpadding="0" cellspacing="0">
             <tr class="top">
