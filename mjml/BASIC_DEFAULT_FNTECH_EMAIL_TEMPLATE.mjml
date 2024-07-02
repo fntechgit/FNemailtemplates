@@ -3,7 +3,7 @@
     <!--
     Template Name: EMAIL_TEMPLATE_NAME_HERE
     Version: 
-    From Email: registration@fntech.com
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
     Use Subject: {{summit_name}}: DESIRED SUBJECT LINE HERE
     -->
     <mj-title>TEMPLATE SHORT DESCRIPTION | {{summit_name}} </mj-title>

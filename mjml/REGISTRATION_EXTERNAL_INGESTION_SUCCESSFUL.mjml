@@ -1,0 +1,50 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: REGISTRATION_EXTERNAL_INGESTION_SUCCESSFUL
+    Version: 1
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: {{summit_name}}: External Registration Data Ingestion
+    -->
+    <mj-title>External Registration Data Ingestion | {{summit_name}} </mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      .banner-full-width {
+        height: 300px;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+   <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+</mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          Hi,
+        </mj-text>
+        <mj-text>
+          The external registration data ingestion for {{ summit_name }} was successful.  </mj-text>
+
+        <mj-text>
+          Cheers, <br/> {{ summit_name }} Support Team
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
