@@ -1,0 +1,58 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: SUMMIT_SUBMISSIONS_SPEAKER_EDIT_PERMISSION_APPROVED
+    Version: 1
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: [{{tenant_name}}] Speaker Profile Edit Permission Approved
+    -->
+    <mj-title>{{tenant_name}} Speaker Profile Edit Permission Approved </mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      .email-link {
+        color: #53585F;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      a {
+        color: #53585F;
+      }
+      .banner-full-width {
+        height: 300px;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          Dear {{ requested_by_full_name }},
+        </mj-text>
+        <mj-text>
+                User {{ speaker_full_name }} has approved your request to edit his/her Speaker Profile.  
+        </mj-text>
+        <mj-text>
+         Thank you 
+        </mj-text>
+        <mj-text>
+          Sincerely, <br/> {{ tenant_name }} Support Team
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

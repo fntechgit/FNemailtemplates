@@ -1,0 +1,94 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: SUMMIT_SUBMISSIONS_PRESENTATION_SPEAKER_NOTIFICATION
+    Version: 1
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: {{summit_name}}: Speaker Notification
+    -->
+    <mj-title>Speaker Notification | {{summit_name}} </mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      .email-link {
+        color: #53585F;
+      }
+
+      button {
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .5rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem .25rem 1.5rem .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+      .banner-full-width {
+        height: 300px;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+  <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer css-class="banner-full-width"/>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-spacer height="18px" />
+        <mj-text>Hi {{ speaker_full_name }},</mj-text>
+        <mj-text>Good news! {{creator_full_name}}, has included you to be a presenter for a session that they submitted for consideration to be included in the upcoming {{summit_name}}, {{summit_date}}.</mj-text>
+        <mj-text>Session details can be found here: <a href="{{presentation_edit_link}}" title="click on this link to review your presentation data">{{presentation_edit_link}}</a></mj-text>
+        <mj-text><strong>IMPORTANT:</strong> Please take some time to <a href="{{bio_edit_link}}" title="click on this link to review your data">review your Speaker Profile</a></mj-text>
+
+        <mj-text>
+          <ul>
+            <li><strong>SO WHAT HAPPENS NEXT AND WHEN WILL I BE NOTIFIED?</strong> 
+            <br/>
+            The Call for Presentations will remain open until {{until_date}}. The Programming Committee will follow the <a href="{{selection_process_link}}">selection process</a>.</li>
+            <li><strong>CAN I EDIT MY SUBMISSIONS OR ADD NEW ONES?</strong>
+            <br/>
+            Absolutely. You can continue to edit your submissions or add new ones until {{until_date}}.
+            <br/>
+            Please go to <a href="{{speaker_management_link}}">{{speaker_management_link}}</a></li>
+            <li><strong>WHAT IF I DON’T KNOW MY PASSWORD?</strong>
+            <br/>
+            Your password can be reset here: <a href="{{reset_password_link}}">{{reset_password_link}}</a></li>
+           <li><strong>WHAT IF I HAVE ADDITIONAL QUESTIONS?</strong><br/>
+            Please feel free to contact us at <a href="mailto:{{support_email}}">{{support_email}}</a></li>
+          </ul>
+        </mj-text>
+
+        <mj-text>Thanks again! We look forward to seeing you at {{summit_name}}.</mj-text>
+
+        <mj-text>
+          Sincerely, <br/>
+          {{ summit_name }} Support Team
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
