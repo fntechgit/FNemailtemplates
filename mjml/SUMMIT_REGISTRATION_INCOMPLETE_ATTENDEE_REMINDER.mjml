@@ -1,0 +1,89 @@
+<mjml>
+  <mj-head>
+    <!--
+    Template Name: SUMMIT_REGISTRATION_INCOMPLETE_ATTENDEE_REMINDER
+    Version: 1
+    From Email: {{ EMAIL_TEMPLATE_GENERIC_FROM }}
+    Use Subject: [{{summit_name}}] Attention! details needed in order to emit your ticket/s
+    -->
+    <mj-title>{{summit_name}} Attention! details needed in order to emit your ticket(s)</mj-title>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css2?family=Open+Sans" />
+    <mj-attributes>
+      <mj-text font-size="16px" line-height="1.6" color="#53585F" font-family="Open Sans, Arial, Helvetica, sans-serif">
+    </mj-attributes>
+    <mj-style>
+      .email-link {
+        color: #53585F;
+      }
+
+      button {
+        border-radius: 4px;
+        font-size: 16px;
+        padding: 6px 12px;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      ul {
+        margin: .25rem 0 1rem;
+        padding-left: 2rem;
+      }
+
+      li {
+        line-height: 1.25rem;
+        margin: .25rem;
+      }
+
+      a {
+        color: #53585F;
+      }
+
+      .details_needed {
+        color: red;
+        font-weight: 600;
+      }
+
+    </mj-style>
+  </mj-head>
+  <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer height="300px"/>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text>
+          Hey {{ owner_full_name }}, 
+          </mj-text>
+          <mj-text>
+          We still need additional details or you have not assigned the ticket(s). 
+          Please ask the attendee to fill in the necessary details, do it for them 
+          on the <a target="_blank" href="{{ manage_orders_url }}">manage orders</a> page, 
+          or assign the ticket to an attendee.
+        </mj-text>
+
+        <mj-button align="left" target="_blank" href="{{ manage_orders_url }}" background-color="#5e5f62" border-radius="4px" font-size="16px">
+          Manage Your Orders for {{ summit_name }}
+        </mj-button>
+
+        <mj-text>
+          Thank you, we look forward to seeing you all the attendees at {{ summit_name }}. If you have any questions please contact the {{ summit_name }}
+          support team at <a href="mailto:{{ support_email }}" target="_blank">{{ support_email }}</a>.
+        </mj-text>
+
+        <mj-text>
+          Thank you, <br/>
+          {{ summit_name }} Support Team
+        </mj-text>
+
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

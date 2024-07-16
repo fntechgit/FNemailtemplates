@@ -48,10 +48,17 @@
     </mj-style>
   </mj-head>
   <mj-body width="700px">
+    <mj-section background-url="{{ EMAIL_TEMPLATE_GENERIC_BANNER }}"
+              background-size="100%"
+              background-repeat="no-repeat"
+              background-position="center"
+              full-width="full-width">
+      <mj-column>
+        <mj-spacer height="300px"/>
+      </mj-column>
+    </mj-section>
     <mj-section>
       <mj-column>
-      <!-- <mj-image alt="{{ summit_name }}" src="EVENT HEADER IMG URL HERE" /> -->
-        <mj-spacer height="18px" />
         <mj-text>
           Hi,
         </mj-text>

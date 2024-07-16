@@ -16,9 +16,6 @@
         font-size: 1rem;
         font-weight: 400;
       }
-      .banner-full-width {
-        height: 300px;
-      }
 
     </mj-style>
   </mj-head>
@@ -29,7 +26,7 @@
               background-position="center"
               full-width="full-width">
       <mj-column>
-        <mj-spacer css-class="banner-full-width"/>
+        <mj-spacer height="300px"/>
       </mj-column>
 </mj-section>
     <mj-section>
