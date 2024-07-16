@@ -39,9 +39,6 @@
       a {
         color: #53585F;
       }
-      .banner-full-width {
-        height: 300px;
-      }
 
     </mj-style>
   </mj-head>
@@ -52,7 +49,7 @@
               background-position="center"
               full-width="full-width">
       <mj-column>
-        <mj-spacer css-class="banner-full-width"/>
+        <mj-spacer height="300px"/>
       </mj-column>
     </mj-section>
     <mj-section>

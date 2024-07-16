@@ -45,11 +45,6 @@
         font-weight: 600;
       }
 
-        .banner-full-width {
-        height: 300px;
-      }
-
-
       .email-cta {
         background-color: #5e5f62;
         width: 75%;
@@ -109,7 +104,7 @@
                background-position="center" 
               full-width="full-width">
       <mj-column>
-        <mj-spacer css-class="banner-full-width"/>
+        <mj-spacer height="300px"/>
       </mj-column>
     </mj-section>
     <mj-section>
